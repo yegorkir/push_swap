@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/yas/push_swap/checker/checker.h
+libft/libft.h
+/home/yas/push_swap/checker/libft/libft.h
+stack.h
+/home/yas/push_swap/checker/stack.h
+
+/home/yas/push_swap/checker/do_rules.c
+stack.h
+/home/yas/push_swap/checker/stack.h
+
+/home/yas/push_swap/checker/ft_ll_atoi.c
+checker.h
+/home/yas/push_swap/checker/checker.h
+
+/home/yas/push_swap/checker/libft/libft.h
+string.h
+-
+stdlib.h
+-
+unistd.h
+-
+
+/home/yas/push_swap/checker/main.c
+stdio.h
+-
+checker.h
+/home/yas/push_swap/checker/checker.h
+
+/home/yas/push_swap/checker/stack.c
+checker.h
+/home/yas/push_swap/checker/checker.h
+limits.h
+-
+
+/home/yas/push_swap/checker/stack.h
+stdlib.h
+-
+
