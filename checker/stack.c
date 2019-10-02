@@ -20,7 +20,7 @@ void	clear_list(t_stack **head)
 		*head = (*head)->next;
 	}
 	free(prev);
-	exit (2);
+	exit (2222);
 }
 
 t_stack *create(char *number)

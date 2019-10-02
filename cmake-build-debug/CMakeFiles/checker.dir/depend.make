@@ -6,6 +6,7 @@ CMakeFiles/checker.dir/checker/do_rules.c.o: ../checker/stack.h
 
 CMakeFiles/checker.dir/checker/ft_ll_atoi.c.o: ../checker/checker.h
 CMakeFiles/checker.dir/checker/ft_ll_atoi.c.o: ../checker/ft_ll_atoi.c
+CMakeFiles/checker.dir/checker/ft_ll_atoi.c.o: ../checker/libft/get_next_line.h
 CMakeFiles/checker.dir/checker/ft_ll_atoi.c.o: ../checker/libft/libft.h
 CMakeFiles/checker.dir/checker/ft_ll_atoi.c.o: ../checker/stack.h
 
@@ -177,11 +178,13 @@ CMakeFiles/checker.dir/checker/libft/get_next_line.c.o: ../checker/libft/get_nex
 CMakeFiles/checker.dir/checker/libft/get_next_line.c.o: ../checker/libft/libft.h
 
 CMakeFiles/checker.dir/checker/main.c.o: ../checker/checker.h
+CMakeFiles/checker.dir/checker/main.c.o: ../checker/libft/get_next_line.h
 CMakeFiles/checker.dir/checker/main.c.o: ../checker/libft/libft.h
 CMakeFiles/checker.dir/checker/main.c.o: ../checker/main.c
 CMakeFiles/checker.dir/checker/main.c.o: ../checker/stack.h
 
 CMakeFiles/checker.dir/checker/stack.c.o: ../checker/checker.h
+CMakeFiles/checker.dir/checker/stack.c.o: ../checker/libft/get_next_line.h
 CMakeFiles/checker.dir/checker/stack.c.o: ../checker/libft/libft.h
 CMakeFiles/checker.dir/checker/stack.c.o: ../checker/stack.c
 CMakeFiles/checker.dir/checker/stack.c.o: ../checker/stack.h
