@@ -6,19 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/Users/mdeanne/push_swap/checker/checker.h
+/home/mdeanne/push_swap/checker/checker.h
 libft/libft.h
-/Users/mdeanne/push_swap/checker/libft/libft.h
+/home/mdeanne/push_swap/checker/libft/libft.h
 libft/get_next_line.h
-/Users/mdeanne/push_swap/checker/libft/get_next_line.h
+/home/mdeanne/push_swap/checker/libft/get_next_line.h
 stack.h
-/Users/mdeanne/push_swap/checker/stack.h
+/home/mdeanne/push_swap/checker/stack.h
 
-/Users/mdeanne/push_swap/checker/libft/get_next_line.h
+/home/mdeanne/push_swap/checker/libft/get_next_line.h
 libft.h
-/Users/mdeanne/push_swap/checker/libft/libft.h
+/home/mdeanne/push_swap/checker/libft/libft.h
 
-/Users/mdeanne/push_swap/checker/libft/libft.h
+/home/mdeanne/push_swap/checker/libft/libft.h
 string.h
 -
 stdlib.h
@@ -26,13 +26,13 @@ stdlib.h
 unistd.h
 -
 
-/Users/mdeanne/push_swap/checker/main.c
+/home/mdeanne/push_swap/checker/main.c
 stdio.h
 -
 checker.h
-/Users/mdeanne/push_swap/checker/checker.h
+/home/mdeanne/push_swap/checker/checker.h
 
-/Users/mdeanne/push_swap/checker/stack.h
+/home/mdeanne/push_swap/checker/stack.h
 stdlib.h
 -
 

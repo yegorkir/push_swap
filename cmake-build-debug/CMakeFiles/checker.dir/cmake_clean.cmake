@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/checker.dir/checker/do_rules.c.o"
+  "CMakeFiles/checker.dir/checker/ft_ll_atoi.c.o"
   "CMakeFiles/checker.dir/checker/libft/ft_atoi.c.o"
   "CMakeFiles/checker.dir/checker/libft/ft_bzero.c.o"
   "CMakeFiles/checker.dir/checker/libft/ft_fib.c.o"
@@ -67,10 +69,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/checker.dir/checker/libft/get_next_line.c.o"
   "CMakeFiles/checker.dir/checker/main.c.o"
   "CMakeFiles/checker.dir/checker/stack.c.o"
-  "CMakeFiles/checker.dir/checker/ft_ll_atoi.c.o"
-  "CMakeFiles/checker.dir/checker/do_rules.c.o"
-  "checker.pdb"
   "checker"
+  "checker.pdb"
 )
 
 # Per-language clean rules from dependency scanning.
