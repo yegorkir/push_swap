@@ -6,6 +6,9 @@
 
 #include "libft/libft.h"
 #include "libft/get_next_line.h"
+#include "stack.h"
+
+void perform_rule(char *rule, t_stack **a, t_stack **b);
 
 #include "stack.h"
 #define CHECKER_H
