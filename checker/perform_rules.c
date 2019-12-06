@@ -3,7 +3,7 @@
 //
 
 #include "stack.h"
-#include "libft/libft.h"
+#include "../libft/libft.h"
 
 _Bool if_swap(char *rule, t_stack **a, t_stack **b)
 {
@@ -17,8 +17,8 @@ _Bool if_swap(char *rule, t_stack **a, t_stack **b)
         swap(b);
     }
 	else
-		return (0);
-	return (1);
+		return (1);
+	return (0);
 }
 
 _Bool if_push(char *rule, t_stack **a, t_stack **b)
@@ -28,8 +28,8 @@ _Bool if_push(char *rule, t_stack **a, t_stack **b)
 	else if (!ft_strcmp(rule, "pb"))
 		push(b, a);
 	else
-		return (0);
-	return (1);
+		return (1);
+	return (0);
 }
 
 _Bool if_rotate(char *rule, t_stack **a, t_stack **b)
@@ -44,8 +44,8 @@ _Bool if_rotate(char *rule, t_stack **a, t_stack **b)
 		rotate(b);
 	}
 	else
-		return (0);
-	return (1);
+		return (1);
+	return (0);
 }
 
 _Bool if_reverse_rotate(char *rule, t_stack **a, t_stack **b)
@@ -60,8 +60,8 @@ _Bool if_reverse_rotate(char *rule, t_stack **a, t_stack **b)
 		reverse_rotate(b);
 	}
 	else
-		return (0);
-	return (1);
+		return (1);
+	return (0);
 }
 
 void perform_rule(char *rule, t_stack **a, t_stack **b)
@@ -69,7 +69,9 @@ void perform_rule(char *rule, t_stack **a, t_stack **b)
 	if(if_swap(rule, a, b) && if_push(rule, a, b) &&
 			if_rotate(rule, a, b) && if_reverse_rotate(rule, a, b))
 	{
-
+		clear_list(a);
+		clear_list(b);
+		go_exit(1);
 	}
     ////else stop&free&return KO
 }

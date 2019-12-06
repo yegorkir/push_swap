@@ -8,6 +8,8 @@
 typedef struct	s_stack
 {
 	int 			number;
+	int 			index;
+	int				depth;
 	struct s_stack	*next;
 }				t_stack;
 
@@ -21,6 +23,10 @@ void	swap(t_stack **head);
 void	push(t_stack **dst, t_stack **src);
 void	rotate(t_stack **head);
 void	reverse_rotate(t_stack **head);
+
+
+
+void	go_exit(_Bool ko);
 
 long long		ft_ll_atoi(const char *str);
 #define CHECKER_STACK_H

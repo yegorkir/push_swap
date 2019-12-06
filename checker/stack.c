@@ -20,7 +20,6 @@ void	clear_list(t_stack **head)
 		*head = (*head)->next;
 	}
 	free(prev);
-	exit (2222);
 }
 
 t_stack *create(char *number)
@@ -38,6 +37,7 @@ t_stack *create(char *number)
 	if (((num = ft_ll_atoi(number)) > INT_MAX) || (num < INT_MIN))
 		return (NULL);
 	new->number = num;
+	new->next = NULL;
 	return (new);
 }
 
