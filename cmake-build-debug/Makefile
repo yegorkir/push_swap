@@ -231,6 +231,33 @@ checker/go_exit.c.s:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/checker/go_exit.c.s
 .PHONY : checker/go_exit.c.s
 
+checker/main_checker.o: checker/main_checker.c.o
+
+.PHONY : checker/main_checker.o
+
+# target to build an object file
+checker/main_checker.c.o:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/checker/main_checker.c.o
+.PHONY : checker/main_checker.c.o
+
+checker/main_checker.i: checker/main_checker.c.i
+
+.PHONY : checker/main_checker.i
+
+# target to preprocess a source file
+checker/main_checker.c.i:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/checker/main_checker.c.i
+.PHONY : checker/main_checker.c.i
+
+checker/main_checker.s: checker/main_checker.c.s
+
+.PHONY : checker/main_checker.s
+
+# target to generate assembly for a file
+checker/main_checker.c.s:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/checker/main_checker.c.s
+.PHONY : checker/main_checker.c.s
+
 checker/perform_rules.o: checker/perform_rules.c.o
 
 .PHONY : checker/perform_rules.o
@@ -2121,32 +2148,32 @@ push_swap/basic_3_algorithms.c.s:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/basic_3_algorithms.c.s
 .PHONY : push_swap/basic_3_algorithms.c.s
 
-push_swap/find_min_max_median.o: push_swap/find_min_max_median.c.o
+push_swap/find_min_max_thirds.o: push_swap/find_min_max_thirds.c.o
 
-.PHONY : push_swap/find_min_max_median.o
+.PHONY : push_swap/find_min_max_thirds.o
 
 # target to build an object file
-push_swap/find_min_max_median.c.o:
-	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/find_min_max_median.c.o
-.PHONY : push_swap/find_min_max_median.c.o
+push_swap/find_min_max_thirds.c.o:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/find_min_max_thirds.c.o
+.PHONY : push_swap/find_min_max_thirds.c.o
 
-push_swap/find_min_max_median.i: push_swap/find_min_max_median.c.i
+push_swap/find_min_max_thirds.i: push_swap/find_min_max_thirds.c.i
 
-.PHONY : push_swap/find_min_max_median.i
+.PHONY : push_swap/find_min_max_thirds.i
 
 # target to preprocess a source file
-push_swap/find_min_max_median.c.i:
-	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/find_min_max_median.c.i
-.PHONY : push_swap/find_min_max_median.c.i
+push_swap/find_min_max_thirds.c.i:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/find_min_max_thirds.c.i
+.PHONY : push_swap/find_min_max_thirds.c.i
 
-push_swap/find_min_max_median.s: push_swap/find_min_max_median.c.s
+push_swap/find_min_max_thirds.s: push_swap/find_min_max_thirds.c.s
 
-.PHONY : push_swap/find_min_max_median.s
+.PHONY : push_swap/find_min_max_thirds.s
 
 # target to generate assembly for a file
-push_swap/find_min_max_median.c.s:
-	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/find_min_max_median.c.s
-.PHONY : push_swap/find_min_max_median.c.s
+push_swap/find_min_max_thirds.c.s:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/find_min_max_thirds.c.s
+.PHONY : push_swap/find_min_max_thirds.c.s
 
 push_swap/indexing_list.o: push_swap/indexing_list.c.o
 
@@ -2223,6 +2250,9 @@ help:
 	@echo "... checker/go_exit.o"
 	@echo "... checker/go_exit.i"
 	@echo "... checker/go_exit.s"
+	@echo "... checker/main_checker.o"
+	@echo "... checker/main_checker.i"
+	@echo "... checker/main_checker.s"
 	@echo "... checker/perform_rules.o"
 	@echo "... checker/perform_rules.i"
 	@echo "... checker/perform_rules.s"
@@ -2433,9 +2463,9 @@ help:
 	@echo "... push_swap/basic_3_algorithms.o"
 	@echo "... push_swap/basic_3_algorithms.i"
 	@echo "... push_swap/basic_3_algorithms.s"
-	@echo "... push_swap/find_min_max_median.o"
-	@echo "... push_swap/find_min_max_median.i"
-	@echo "... push_swap/find_min_max_median.s"
+	@echo "... push_swap/find_min_max_thirds.o"
+	@echo "... push_swap/find_min_max_thirds.i"
+	@echo "... push_swap/find_min_max_thirds.s"
 	@echo "... push_swap/indexing_list.o"
 	@echo "... push_swap/indexing_list.i"
 	@echo "... push_swap/indexing_list.s"

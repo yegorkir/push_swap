@@ -13,7 +13,7 @@ add_executable(push_swap
         checker/do_rules.c
         checker/ft_ll_atoi.c
         checker/go_exit.c
-        #checker/main_checker.c
+        checker/main_checker.c
         checker/perform_rules.c
         checker/read_n_execute.c
         checker/stack.c
@@ -87,6 +87,7 @@ add_executable(push_swap
         libft/get_next_line.h
         libft/libft.h
         push_swap/basic_3_algorithms.c
-        push_swap/find_min_max_median.c
+        push_swap/find_min_max_thirds.c
+        push_swap/indexing_list.c
         push_swap/main_push_swap.c
-        push_swap/push_swap.h push_swap/indexing_list.c)
+        push_swap/push_swap.h)

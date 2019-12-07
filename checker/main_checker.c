@@ -1,6 +1,7 @@
 #include "checker.h"
 
 
+/*
 int main(int ac, char **av)
 {
 	t_stack	*a = NULL;
@@ -18,4 +19,4 @@ int main(int ac, char **av)
 	ft_putendl("OK");
 	clear_list(&a);
 	return 0;
-}
+}*/

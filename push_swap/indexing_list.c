@@ -5,34 +5,64 @@
 #include <stack.h>
 #include "../push_swap/push_swap.h"
 
-void 	indexing_list(t_stack *stack)
+
+static _Bool need_break(t_init *init)
 {
-	int min;
-	int max;
-	t_stack *tmp;
-	int i;
-
-	max = find_min_max(stack, &min);
-	tmp = stack;
-	while (tmp)
+	if (init->min_elem == init->min_last_elem &&
+		init->max_elem == init->max_last_elem)
+		return (1);
+	else
 	{
-		tmp->index = tmp->number - min;
-		tmp = tmp->next;
+		init->min_last_elem = init->min_elem;
+		init->max_last_elem = init->max_elem;
 	}
-	while (max)
-	{
-		tmp = stack;
-		while (1)
-		{
+		return (0);
+}
 
+static void	find_notindexed_elem(t_stack *stack, t_init *init)
+{
+	while (stack)
+	{
+		if (!stack->index)
+		{
+			init->min_elem = stack;
+			init->max_elem = stack;
+			break ;
 		}
+		stack = stack->next;
 	}
 }
 
+static void init_init(t_stack *stack, t_init *init)
+{
+	init->min_elem = stack;
+	init->max_elem = stack;
+	init->min_last_elem = stack;
+	init->max_last_elem = stack;
+	init->min_indx = 1;
+	init->max_indx = lst_len(stack);
+}
+
+void 	indexing_list(t_stack *stack)
+{
+	t_init init;
+	t_stack *tmp;
+
+	init_init(stack, &init);
+	while (1)
+	{
+		find_min_max_by_num(stack, &init);
+		if (need_break(&init))
+			break ;
+		find_notindexed_elem(stack, &init);
+	}
+}
+
+/*
 int		find_elem_by_inx(t_stack *stack, int indx)
 {
 	while (stack)
 	{
 		if (stack->index == indx)
 	}
-}
+}*/

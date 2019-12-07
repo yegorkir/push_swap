@@ -101,6 +101,9 @@
 		<Unit filename="/Users/mdeanne/push_swap/checker/go_exit.c">
 			<Option target="push_swap"/>
 		</Unit>
+		<Unit filename="/Users/mdeanne/push_swap/checker/main_checker.c">
+			<Option target="push_swap"/>
+		</Unit>
 		<Unit filename="/Users/mdeanne/push_swap/checker/perform_rules.c">
 			<Option target="push_swap"/>
 		</Unit>
@@ -320,7 +323,7 @@
 		<Unit filename="/Users/mdeanne/push_swap/push_swap/basic_3_algorithms.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/push_swap/push_swap/find_min_max_median.c">
+		<Unit filename="/Users/mdeanne/push_swap/push_swap/find_min_max_thirds.c">
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/Users/mdeanne/push_swap/push_swap/indexing_list.c">

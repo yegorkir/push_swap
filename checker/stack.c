@@ -37,6 +37,8 @@ t_stack *create(char *number)
 	if (((num = ft_ll_atoi(number)) > INT_MAX) || (num < INT_MIN))
 		return (NULL);
 	new->number = num;
+	new->depth = 0;
+	new->index = 0;
 	new->next = NULL;
 	return (new);
 }
