@@ -10,7 +10,7 @@ include_directories(push_swap)
 add_executable(push_swap
         checker/check_result.c
         checker/checker.h
-        checker/do_rules.c
+        checker/do_rules_checker.c
         checker/ft_ll_atoi.c
         checker/go_exit.c
         checker/main_checker.c
@@ -86,8 +86,12 @@ add_executable(push_swap
         libft/get_next_line.c
         libft/get_next_line.h
         libft/libft.h
-        push_swap/basic_3_algorithms.c
+        push_swap/basic_triples_algorithms.c
         push_swap/find_min_max_thirds.c
         push_swap/indexing_list.c
         push_swap/main_push_swap.c
-        push_swap/push_swap.h)
+        push_swap/push_swap.h
+        push_swap/sorter.c
+        push_swap/funcs_sort_in_3_groups.c
+        push_swap/choose_triple.c
+        push_swap/do_rules_ps.c)

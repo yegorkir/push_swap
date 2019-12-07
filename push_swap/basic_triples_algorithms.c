@@ -2,11 +2,12 @@
 // Created by Mort Deanne on 06/12/2019.
 //
 
-#include "../checker/stack.h"
 
-void	mid_min_max(t_stack **stack, char name_stack)
+#include "push_swap.h"
+
+void mid_min_max(t_stack **stack)
 {
-	if (name_stack == 'a')
+	if ((*stack)->stack_name == 'a')
 		swap(stack); /// A
 	else
 	{
@@ -17,9 +18,9 @@ void	mid_min_max(t_stack **stack, char name_stack)
 	}
 }
 
-void	mid_max_min(t_stack **stack, char name_stack)
+void mid_max_min(t_stack **stack)
 {
-	if (name_stack == 'a')
+	if ((*stack)->stack_name == 'a')
 	{
 		rotate(stack); /// E
 		swap(stack);
@@ -32,9 +33,9 @@ void	mid_max_min(t_stack **stack, char name_stack)
 	}
 }
 
-void	min_max_mid(t_stack **stack, char name_stack)
+void min_max_mid(t_stack **stack)
 {
-	if (name_stack == 'a')
+	if ((*stack)->stack_name == 'a')
 	{
 		rotate(stack); /// B
 		swap(stack);
@@ -49,9 +50,9 @@ void	min_max_mid(t_stack **stack, char name_stack)
 	}
 }
 
-void	max_min_mid(t_stack **stack, char name_stack)
+void max_min_mid(t_stack **stack)
 {
-	if (name_stack == 'a')
+	if ((*stack)->stack_name == 'a')
 	{
 		swap(stack); /// C
 		rotate(stack);
@@ -66,14 +67,11 @@ void	max_min_mid(t_stack **stack, char name_stack)
 	}
 }
 
-void	max_mid_min(t_stack **stack, char name_stack)
+void max_mid_min(t_stack **stack)
 {
-	if (name_stack == 'a')
-	{
 		swap(stack);
 		rotate(stack);
 		swap(stack);
 		reverse_rotate(stack);
 		swap(stack);
-	}
 }

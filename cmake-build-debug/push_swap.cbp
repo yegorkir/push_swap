@@ -92,7 +92,7 @@
 		<Unit filename="/Users/mdeanne/push_swap/checker/checker.h">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/push_swap/checker/do_rules.c">
+		<Unit filename="/Users/mdeanne/push_swap/checker/do_rules_checker.c">
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/Users/mdeanne/push_swap/checker/ft_ll_atoi.c">
@@ -320,10 +320,19 @@
 		<Unit filename="/Users/mdeanne/push_swap/libft/libft.h">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/push_swap/push_swap/basic_3_algorithms.c">
+		<Unit filename="/Users/mdeanne/push_swap/push_swap/basic_triples_algorithms.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/mdeanne/push_swap/push_swap/choose_triple.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/mdeanne/push_swap/push_swap/do_rules_ps.c">
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/Users/mdeanne/push_swap/push_swap/find_min_max_thirds.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/mdeanne/push_swap/push_swap/funcs_sort_in_3_groups.c">
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/Users/mdeanne/push_swap/push_swap/indexing_list.c">
@@ -333,6 +342,9 @@
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/Users/mdeanne/push_swap/push_swap/push_swap.h">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/mdeanne/push_swap/push_swap/sorter.c">
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/Users/mdeanne/push_swap/CMakeLists.txt">

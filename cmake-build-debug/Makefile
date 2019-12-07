@@ -150,32 +150,32 @@ checker/check_result.c.s:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/checker/check_result.c.s
 .PHONY : checker/check_result.c.s
 
-checker/do_rules.o: checker/do_rules.c.o
+checker/do_rules_checker.o: checker/do_rules_checker.c.o
 
-.PHONY : checker/do_rules.o
+.PHONY : checker/do_rules_checker.o
 
 # target to build an object file
-checker/do_rules.c.o:
-	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/checker/do_rules.c.o
-.PHONY : checker/do_rules.c.o
+checker/do_rules_checker.c.o:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/checker/do_rules_checker.c.o
+.PHONY : checker/do_rules_checker.c.o
 
-checker/do_rules.i: checker/do_rules.c.i
+checker/do_rules_checker.i: checker/do_rules_checker.c.i
 
-.PHONY : checker/do_rules.i
+.PHONY : checker/do_rules_checker.i
 
 # target to preprocess a source file
-checker/do_rules.c.i:
-	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/checker/do_rules.c.i
-.PHONY : checker/do_rules.c.i
+checker/do_rules_checker.c.i:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/checker/do_rules_checker.c.i
+.PHONY : checker/do_rules_checker.c.i
 
-checker/do_rules.s: checker/do_rules.c.s
+checker/do_rules_checker.s: checker/do_rules_checker.c.s
 
-.PHONY : checker/do_rules.s
+.PHONY : checker/do_rules_checker.s
 
 # target to generate assembly for a file
-checker/do_rules.c.s:
-	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/checker/do_rules.c.s
-.PHONY : checker/do_rules.c.s
+checker/do_rules_checker.c.s:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/checker/do_rules_checker.c.s
+.PHONY : checker/do_rules_checker.c.s
 
 checker/ft_ll_atoi.o: checker/ft_ll_atoi.c.o
 
@@ -2121,32 +2121,86 @@ libft/get_next_line.c.s:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/libft/get_next_line.c.s
 .PHONY : libft/get_next_line.c.s
 
-push_swap/basic_3_algorithms.o: push_swap/basic_3_algorithms.c.o
+push_swap/basic_triples_algorithms.o: push_swap/basic_triples_algorithms.c.o
 
-.PHONY : push_swap/basic_3_algorithms.o
+.PHONY : push_swap/basic_triples_algorithms.o
 
 # target to build an object file
-push_swap/basic_3_algorithms.c.o:
-	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/basic_3_algorithms.c.o
-.PHONY : push_swap/basic_3_algorithms.c.o
+push_swap/basic_triples_algorithms.c.o:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/basic_triples_algorithms.c.o
+.PHONY : push_swap/basic_triples_algorithms.c.o
 
-push_swap/basic_3_algorithms.i: push_swap/basic_3_algorithms.c.i
+push_swap/basic_triples_algorithms.i: push_swap/basic_triples_algorithms.c.i
 
-.PHONY : push_swap/basic_3_algorithms.i
+.PHONY : push_swap/basic_triples_algorithms.i
 
 # target to preprocess a source file
-push_swap/basic_3_algorithms.c.i:
-	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/basic_3_algorithms.c.i
-.PHONY : push_swap/basic_3_algorithms.c.i
+push_swap/basic_triples_algorithms.c.i:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/basic_triples_algorithms.c.i
+.PHONY : push_swap/basic_triples_algorithms.c.i
 
-push_swap/basic_3_algorithms.s: push_swap/basic_3_algorithms.c.s
+push_swap/basic_triples_algorithms.s: push_swap/basic_triples_algorithms.c.s
 
-.PHONY : push_swap/basic_3_algorithms.s
+.PHONY : push_swap/basic_triples_algorithms.s
 
 # target to generate assembly for a file
-push_swap/basic_3_algorithms.c.s:
-	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/basic_3_algorithms.c.s
-.PHONY : push_swap/basic_3_algorithms.c.s
+push_swap/basic_triples_algorithms.c.s:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/basic_triples_algorithms.c.s
+.PHONY : push_swap/basic_triples_algorithms.c.s
+
+push_swap/choose_triple.o: push_swap/choose_triple.c.o
+
+.PHONY : push_swap/choose_triple.o
+
+# target to build an object file
+push_swap/choose_triple.c.o:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/choose_triple.c.o
+.PHONY : push_swap/choose_triple.c.o
+
+push_swap/choose_triple.i: push_swap/choose_triple.c.i
+
+.PHONY : push_swap/choose_triple.i
+
+# target to preprocess a source file
+push_swap/choose_triple.c.i:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/choose_triple.c.i
+.PHONY : push_swap/choose_triple.c.i
+
+push_swap/choose_triple.s: push_swap/choose_triple.c.s
+
+.PHONY : push_swap/choose_triple.s
+
+# target to generate assembly for a file
+push_swap/choose_triple.c.s:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/choose_triple.c.s
+.PHONY : push_swap/choose_triple.c.s
+
+push_swap/do_rules_ps.o: push_swap/do_rules_ps.c.o
+
+.PHONY : push_swap/do_rules_ps.o
+
+# target to build an object file
+push_swap/do_rules_ps.c.o:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/do_rules_ps.c.o
+.PHONY : push_swap/do_rules_ps.c.o
+
+push_swap/do_rules_ps.i: push_swap/do_rules_ps.c.i
+
+.PHONY : push_swap/do_rules_ps.i
+
+# target to preprocess a source file
+push_swap/do_rules_ps.c.i:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/do_rules_ps.c.i
+.PHONY : push_swap/do_rules_ps.c.i
+
+push_swap/do_rules_ps.s: push_swap/do_rules_ps.c.s
+
+.PHONY : push_swap/do_rules_ps.s
+
+# target to generate assembly for a file
+push_swap/do_rules_ps.c.s:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/do_rules_ps.c.s
+.PHONY : push_swap/do_rules_ps.c.s
 
 push_swap/find_min_max_thirds.o: push_swap/find_min_max_thirds.c.o
 
@@ -2174,6 +2228,33 @@ push_swap/find_min_max_thirds.s: push_swap/find_min_max_thirds.c.s
 push_swap/find_min_max_thirds.c.s:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/find_min_max_thirds.c.s
 .PHONY : push_swap/find_min_max_thirds.c.s
+
+push_swap/funcs_sort_in_3_groups.o: push_swap/funcs_sort_in_3_groups.c.o
+
+.PHONY : push_swap/funcs_sort_in_3_groups.o
+
+# target to build an object file
+push_swap/funcs_sort_in_3_groups.c.o:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/funcs_sort_in_3_groups.c.o
+.PHONY : push_swap/funcs_sort_in_3_groups.c.o
+
+push_swap/funcs_sort_in_3_groups.i: push_swap/funcs_sort_in_3_groups.c.i
+
+.PHONY : push_swap/funcs_sort_in_3_groups.i
+
+# target to preprocess a source file
+push_swap/funcs_sort_in_3_groups.c.i:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/funcs_sort_in_3_groups.c.i
+.PHONY : push_swap/funcs_sort_in_3_groups.c.i
+
+push_swap/funcs_sort_in_3_groups.s: push_swap/funcs_sort_in_3_groups.c.s
+
+.PHONY : push_swap/funcs_sort_in_3_groups.s
+
+# target to generate assembly for a file
+push_swap/funcs_sort_in_3_groups.c.s:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/funcs_sort_in_3_groups.c.s
+.PHONY : push_swap/funcs_sort_in_3_groups.c.s
 
 push_swap/indexing_list.o: push_swap/indexing_list.c.o
 
@@ -2229,6 +2310,33 @@ push_swap/main_push_swap.c.s:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/main_push_swap.c.s
 .PHONY : push_swap/main_push_swap.c.s
 
+push_swap/sorter.o: push_swap/sorter.c.o
+
+.PHONY : push_swap/sorter.o
+
+# target to build an object file
+push_swap/sorter.c.o:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/sorter.c.o
+.PHONY : push_swap/sorter.c.o
+
+push_swap/sorter.i: push_swap/sorter.c.i
+
+.PHONY : push_swap/sorter.i
+
+# target to preprocess a source file
+push_swap/sorter.c.i:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/sorter.c.i
+.PHONY : push_swap/sorter.c.i
+
+push_swap/sorter.s: push_swap/sorter.c.s
+
+.PHONY : push_swap/sorter.s
+
+# target to generate assembly for a file
+push_swap/sorter.c.s:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/sorter.c.s
+.PHONY : push_swap/sorter.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -2241,9 +2349,9 @@ help:
 	@echo "... checker/check_result.o"
 	@echo "... checker/check_result.i"
 	@echo "... checker/check_result.s"
-	@echo "... checker/do_rules.o"
-	@echo "... checker/do_rules.i"
-	@echo "... checker/do_rules.s"
+	@echo "... checker/do_rules_checker.o"
+	@echo "... checker/do_rules_checker.i"
+	@echo "... checker/do_rules_checker.s"
 	@echo "... checker/ft_ll_atoi.o"
 	@echo "... checker/ft_ll_atoi.i"
 	@echo "... checker/ft_ll_atoi.s"
@@ -2460,18 +2568,30 @@ help:
 	@echo "... libft/get_next_line.o"
 	@echo "... libft/get_next_line.i"
 	@echo "... libft/get_next_line.s"
-	@echo "... push_swap/basic_3_algorithms.o"
-	@echo "... push_swap/basic_3_algorithms.i"
-	@echo "... push_swap/basic_3_algorithms.s"
+	@echo "... push_swap/basic_triples_algorithms.o"
+	@echo "... push_swap/basic_triples_algorithms.i"
+	@echo "... push_swap/basic_triples_algorithms.s"
+	@echo "... push_swap/choose_triple.o"
+	@echo "... push_swap/choose_triple.i"
+	@echo "... push_swap/choose_triple.s"
+	@echo "... push_swap/do_rules_ps.o"
+	@echo "... push_swap/do_rules_ps.i"
+	@echo "... push_swap/do_rules_ps.s"
 	@echo "... push_swap/find_min_max_thirds.o"
 	@echo "... push_swap/find_min_max_thirds.i"
 	@echo "... push_swap/find_min_max_thirds.s"
+	@echo "... push_swap/funcs_sort_in_3_groups.o"
+	@echo "... push_swap/funcs_sort_in_3_groups.i"
+	@echo "... push_swap/funcs_sort_in_3_groups.s"
 	@echo "... push_swap/indexing_list.o"
 	@echo "... push_swap/indexing_list.i"
 	@echo "... push_swap/indexing_list.s"
 	@echo "... push_swap/main_push_swap.o"
 	@echo "... push_swap/main_push_swap.i"
 	@echo "... push_swap/main_push_swap.s"
+	@echo "... push_swap/sorter.o"
+	@echo "... push_swap/sorter.i"
+	@echo "... push_swap/sorter.s"
 .PHONY : help
 
 

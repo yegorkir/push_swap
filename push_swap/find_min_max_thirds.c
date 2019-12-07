@@ -5,26 +5,6 @@
 #include "../checker/stack.h"
 #include "push_swap.h"
 
-int		find_min_max(t_stack *stack, int *min)
-{
-	int depth;
-	int max;
-
-	depth = stack->depth;
-	*min = stack->index;
-	max = stack->index;
-	while(stack && stack->depth == depth)
-	{
-		if (*min > stack->index)
-			*min = stack->index;
-		if (max < stack->index)
-			max = stack->index;
-		stack = stack->next;
-	}
-
-	return (max);
-}
-
 int find_min_max_by_num(t_stack *stack, t_init *init)
 {
 
@@ -53,11 +33,14 @@ int find_min_max_by_num(t_stack *stack, t_init *init)
 	return (0);
 }
 
-int		lst_len(t_stack * stack)
+int		lst_group_len(t_stack *stack)
 {
 	int len;
+	int depth;
 
-	while (stack)
+	depth = stack->depth;
+	len = 0;
+	while (stack && depth == stack->depth)
 	{
 		len++;
 		stack = stack->next;
@@ -65,21 +48,53 @@ int		lst_len(t_stack * stack)
 	return (len);
 }
 
-int		find_thirds(int min, int max, int *third, int *two_thirds)
+int		find_min_max(t_stack *stack, int *min)
+{
+	int depth;
+	int max;
+
+	depth = stack->depth;
+	*min = stack->index;
+	max = stack->index;
+	while (stack && stack->depth == depth)
+	{
+		if (*min > stack->index)
+			*min = stack->index;
+		if (max < stack->index)
+			max = stack->index;
+		stack = stack->next;
+	}
+
+	return (max);
+}
+
+int find_thirds(t_stack *stack, int *third, int *two_thirds)
 {
 	int modulo;
+	int min;
+	int max;
+
+	//////
+	if (!stack)
+	{
+		min = 10;
+		max = 21;
+	}
+	else ////
+		max = find_min_max(stack, &min);
+
 
 	max -= min - 1;
 	modulo = max % 3;
 	*third = max / 3;
 	*two_thirds = *third * 2;
 	if (modulo)
-	{
-		(*third)++;
 		(*two_thirds)++;
-	}
 	if (modulo == 2)
+	{
 		(*two_thirds)++;
+		(*third)++;
+	}
 	*third += min - 1;
 	*two_thirds += min - 1;
 	return (0);

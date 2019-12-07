@@ -23,14 +23,19 @@ int main(int ac, char **av)
 
 	indexing_list(a);
 
-	b = a;
+	int min;
+	int max;
 
-	printf("9 21 22 5 17 11 23 7 1 19 24 12 13 16 8 26 2 4 14 15 3 25 20 6 18 10\n");
-	while (b)
-	{
-		printf("%d ", b->index);
-		b = b->next;
-	}
+	max = find_min_max(a, &min);
+
+
+	sorter(&a, &b);
+
+/*	int third;
+	int two_third;
+
+	find_thirds(NULL, &third, &two_third);
+	printf("%d %d", third, two_third);*/
 	clear_list(&a);
 	return 0;
 }

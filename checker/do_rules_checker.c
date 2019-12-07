@@ -4,9 +4,9 @@
 
 #include "stack.h"
 
+#include <stdio.h>
 
-
-void	swap(t_stack **head)
+void	swap_ch(t_stack **head)
 {
 	t_stack *prev;
 
@@ -19,7 +19,7 @@ void	swap(t_stack **head)
 	}
 }
 
-void	push(t_stack **dst, t_stack **src)
+void	push_ch(t_stack **dst, t_stack **src)
 {
 	t_stack *src_next;
 
@@ -32,7 +32,7 @@ void	push(t_stack **dst, t_stack **src)
 	}
 }
 
-void	rotate(t_stack **head)
+void	rotate_ch(t_stack **head)
 {
 	t_stack *tail;
 
@@ -47,7 +47,7 @@ void	rotate(t_stack **head)
 	}
 }
 
-void	reverse_rotate(t_stack **head)
+void	reverse_rotate_ch(t_stack **head)
 {
 	t_stack *second;
 	t_stack *pretail;

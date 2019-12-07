@@ -39,6 +39,7 @@ t_stack *create(char *number)
 	new->number = num;
 	new->depth = 0;
 	new->index = 0;
+	new->stack_name = 'a';
 	new->next = NULL;
 	return (new);
 }

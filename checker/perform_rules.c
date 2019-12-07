@@ -8,13 +8,13 @@
 _Bool if_swap(char *rule, t_stack **a, t_stack **b)
 {
     if (!ft_strcmp(rule, "sa"))
-        swap(a);
+		swap_ch(a);
     else if (!ft_strcmp(rule, "sb"))
-        swap(b);
+		swap_ch(b);
     else if (!ft_strcmp(rule, "ss"))
     {
-        swap(a);
-        swap(b);
+		swap_ch(a);
+		swap_ch(b);
     }
 	else
 		return (1);
@@ -24,9 +24,9 @@ _Bool if_swap(char *rule, t_stack **a, t_stack **b)
 _Bool if_push(char *rule, t_stack **a, t_stack **b)
 {
 	if (!ft_strcmp(rule, "pa"))
-		push(a, b);
+		push_ch(a, b);
 	else if (!ft_strcmp(rule, "pb"))
-		push(b, a);
+		push_ch(b, a);
 	else
 		return (1);
 	return (0);
@@ -35,13 +35,13 @@ _Bool if_push(char *rule, t_stack **a, t_stack **b)
 _Bool if_rotate(char *rule, t_stack **a, t_stack **b)
 {
 	if (!ft_strcmp(rule, "ra"))
-	rotate(a);
+		rotate_ch(a);
 	else if (!ft_strcmp(rule, "rb"))
-		rotate(b);
+		rotate_ch(b);
 	else if (!ft_strcmp(rule, "rr"))
 	{
-		rotate(a);
-		rotate(b);
+		rotate_ch(a);
+		rotate_ch(b);
 	}
 	else
 		return (1);
@@ -51,13 +51,13 @@ _Bool if_rotate(char *rule, t_stack **a, t_stack **b)
 _Bool if_reverse_rotate(char *rule, t_stack **a, t_stack **b)
 {
 	if (!ft_strcmp(rule, "rra"))
-		reverse_rotate(a);
+		reverse_rotate_ch(a);
 	else if (!ft_strcmp(rule, "rrb"))
-		reverse_rotate(b);
+		reverse_rotate_ch(b);
 	else if (!ft_strcmp(rule, "rrr"))
 	{
-		reverse_rotate(a);
-		reverse_rotate(b);
+		reverse_rotate_ch(a);
+		reverse_rotate_ch(b);
 	}
 	else
 		return (1);
