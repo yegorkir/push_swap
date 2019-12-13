@@ -25,7 +25,7 @@ void	push(t_stack **dst, t_stack **src)
 {
 	t_stack *src_next;
 
-	printf("p%c\n", (*dst)->stack_name);
+	printf("p%c\n", (*src)->stack_name == 'a' ? 'b' : 'a');
 
 	if (dst && src && *src)
 	{

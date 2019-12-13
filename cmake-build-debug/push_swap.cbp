@@ -320,7 +320,7 @@
 		<Unit filename="/Users/mdeanne/push_swap/libft/libft.h">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/Users/mdeanne/push_swap/push_swap/basic_triples_algorithms.c">
+		<Unit filename="/Users/mdeanne/push_swap/push_swap/basic_triples_algorithms_b.c">
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/Users/mdeanne/push_swap/push_swap/choose_triple.c">
@@ -345,6 +345,9 @@
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/Users/mdeanne/push_swap/push_swap/sorter.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/mdeanne/push_swap/push_swap/third_triple_algorithms.c">
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/Users/mdeanne/push_swap/CMakeLists.txt">

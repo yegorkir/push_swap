@@ -2121,32 +2121,32 @@ libft/get_next_line.c.s:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/libft/get_next_line.c.s
 .PHONY : libft/get_next_line.c.s
 
-push_swap/basic_triples_algorithms.o: push_swap/basic_triples_algorithms.c.o
+push_swap/basic_triples_algorithms_b.o: push_swap/basic_triples_algorithms_b.c.o
 
-.PHONY : push_swap/basic_triples_algorithms.o
+.PHONY : push_swap/basic_triples_algorithms_b.o
 
 # target to build an object file
-push_swap/basic_triples_algorithms.c.o:
-	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/basic_triples_algorithms.c.o
-.PHONY : push_swap/basic_triples_algorithms.c.o
+push_swap/basic_triples_algorithms_b.c.o:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/basic_triples_algorithms_b.c.o
+.PHONY : push_swap/basic_triples_algorithms_b.c.o
 
-push_swap/basic_triples_algorithms.i: push_swap/basic_triples_algorithms.c.i
+push_swap/basic_triples_algorithms_b.i: push_swap/basic_triples_algorithms_b.c.i
 
-.PHONY : push_swap/basic_triples_algorithms.i
+.PHONY : push_swap/basic_triples_algorithms_b.i
 
 # target to preprocess a source file
-push_swap/basic_triples_algorithms.c.i:
-	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/basic_triples_algorithms.c.i
-.PHONY : push_swap/basic_triples_algorithms.c.i
+push_swap/basic_triples_algorithms_b.c.i:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/basic_triples_algorithms_b.c.i
+.PHONY : push_swap/basic_triples_algorithms_b.c.i
 
-push_swap/basic_triples_algorithms.s: push_swap/basic_triples_algorithms.c.s
+push_swap/basic_triples_algorithms_b.s: push_swap/basic_triples_algorithms_b.c.s
 
-.PHONY : push_swap/basic_triples_algorithms.s
+.PHONY : push_swap/basic_triples_algorithms_b.s
 
 # target to generate assembly for a file
-push_swap/basic_triples_algorithms.c.s:
-	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/basic_triples_algorithms.c.s
-.PHONY : push_swap/basic_triples_algorithms.c.s
+push_swap/basic_triples_algorithms_b.c.s:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/basic_triples_algorithms_b.c.s
+.PHONY : push_swap/basic_triples_algorithms_b.c.s
 
 push_swap/choose_triple.o: push_swap/choose_triple.c.o
 
@@ -2336,6 +2336,33 @@ push_swap/sorter.s: push_swap/sorter.c.s
 push_swap/sorter.c.s:
 	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/sorter.c.s
 .PHONY : push_swap/sorter.c.s
+
+push_swap/third_triple_algorithms.o: push_swap/third_triple_algorithms.c.o
+
+.PHONY : push_swap/third_triple_algorithms.o
+
+# target to build an object file
+push_swap/third_triple_algorithms.c.o:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/third_triple_algorithms.c.o
+.PHONY : push_swap/third_triple_algorithms.c.o
+
+push_swap/third_triple_algorithms.i: push_swap/third_triple_algorithms.c.i
+
+.PHONY : push_swap/third_triple_algorithms.i
+
+# target to preprocess a source file
+push_swap/third_triple_algorithms.c.i:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/third_triple_algorithms.c.i
+.PHONY : push_swap/third_triple_algorithms.c.i
+
+push_swap/third_triple_algorithms.s: push_swap/third_triple_algorithms.c.s
+
+.PHONY : push_swap/third_triple_algorithms.s
+
+# target to generate assembly for a file
+push_swap/third_triple_algorithms.c.s:
+	$(MAKE) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/push_swap/third_triple_algorithms.c.s
+.PHONY : push_swap/third_triple_algorithms.c.s
 
 # Help Target
 help:
@@ -2568,9 +2595,9 @@ help:
 	@echo "... libft/get_next_line.o"
 	@echo "... libft/get_next_line.i"
 	@echo "... libft/get_next_line.s"
-	@echo "... push_swap/basic_triples_algorithms.o"
-	@echo "... push_swap/basic_triples_algorithms.i"
-	@echo "... push_swap/basic_triples_algorithms.s"
+	@echo "... push_swap/basic_triples_algorithms_b.o"
+	@echo "... push_swap/basic_triples_algorithms_b.i"
+	@echo "... push_swap/basic_triples_algorithms_b.s"
 	@echo "... push_swap/choose_triple.o"
 	@echo "... push_swap/choose_triple.i"
 	@echo "... push_swap/choose_triple.s"
@@ -2592,6 +2619,9 @@ help:
 	@echo "... push_swap/sorter.o"
 	@echo "... push_swap/sorter.i"
 	@echo "... push_swap/sorter.s"
+	@echo "... push_swap/third_triple_algorithms.o"
+	@echo "... push_swap/third_triple_algorithms.i"
+	@echo "... push_swap/third_triple_algorithms.s"
 .PHONY : help
 
 

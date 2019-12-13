@@ -8,7 +8,6 @@
 void	sorter(t_stack **first, t_stack **second)
 {
 	while (lst_group_len(*first) > 3)
-	{
 		sort_in_three_groups(first, second, 'a');
-	}
+
 }

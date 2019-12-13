@@ -9,7 +9,16 @@
 
 #include "push_swap.h"
 
-
+void print_list(t_stack *stack)
+{
+	printf("-----------------\n");
+	while (stack)
+	{
+		printf("%d\t%d\n", stack->number, stack->index);
+		stack = stack->next;
+	}
+	printf("-----------------\n");
+}
 
 int main(int ac, char **av)
 {
@@ -23,20 +32,10 @@ int main(int ac, char **av)
 
 	indexing_list(a);
 
-	int min;
-	int max;
-
-	max = find_min_max(a, &min);
-
-
 	sorter(&a, &b);
 
-/*	int third;
-	int two_third;
-
-	find_thirds(NULL, &third, &two_third);
-	printf("%d %d", third, two_third);*/
 	clear_list(&a);
+	clear_list(&b);
 	return 0;
 }
 

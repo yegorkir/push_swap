@@ -10,7 +10,8 @@ void	clear_list(t_stack **head)
 	t_stack *prev;
 
 	if (!head || !*head)
-		exit (1);
+		//exit (0);
+		return ;
 	prev = *head;
 	*head = (*head)->next;
 	while (*head)
