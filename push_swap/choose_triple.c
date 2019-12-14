@@ -23,23 +23,29 @@ void 	third_triple_algorithm(t_stack **stack, t_part *part)
 
 void 	second_triple_algorithm(t_stack **a, t_stack **b, t_part *part)
 {
-	if (part->len == 2) /// min->max
+	if (check_descending(*b, part->len)) // max/*->mid*/->min
 	{
-		if (check_ascending(*a, part->len))
-			swap(b);
+		push(a, b);
+		push(a, b);
+		if (part->len == 3)
+			push(a, b);
+	}
+	if ((*b)->next->index - (*b)->index == 1) /// min->max
+	{
+		swap(b);
 		push(a, b);
 		push(a, b);
 	}
 	else if (check_ascending(*a, part->len))
-		MIN_MID_MAX_B(a);
+		min_mid_max_second(a, b);
 	else if (part->max == (*a)->index)
-		MAX_MIN_MID_B(a);
+		max_min_mid_second(a, b);
 	else if (part->min == (*a)->index)
-		MIN_MAX_MID_B(a);
+		min_max_mid_second(a, b);
 	else if (part->max == (*a)->next->index)
-		MID_MAX_MIN_B(a);
+		mid_max_min_second(a, b);
 	else if (part->min == (*a)->next->index)
-		MID_MIN_MAX_B(a);
+		mid_min_max_second(a, b);
 }
 
 int 	choose_triple_algorithm(t_stack **stack)

@@ -6,11 +6,7 @@
 #define CHECKER_PUSH_SWAP_H
 
 #include "../checker/stack.h"
-# define MID_MAX_MIN_B(stack) mid_min_max_a(stack)
-# define MID_MIN_MAX_B(stack) mid_max_min_a(stack)
-# define MAX_MIN_MID_B(stack) min_max_mid_a(stack)
-# define MIN_MAX_MID_B(stack) max_min_mid_a(stack)
-# define MIN_MID_MAX_B(stack) max_mid_min_a(stack)
+
 
 typedef struct	s_init
 {
@@ -44,7 +40,11 @@ void min_max_mid_a(t_stack **stack);
 void max_min_mid_a(t_stack **stack);
 void max_mid_min_a(t_stack **stack);
 
-
+void min_mid_max_second(t_stack **a, t_stack **b);
+void max_min_mid_second(t_stack **a, t_stack **b);
+void min_max_mid_second(t_stack **a, t_stack **b);
+void mid_max_min_second(t_stack **a, t_stack **b);
+void mid_min_max_second(t_stack **a, t_stack **b);
 
 
 int		find_min_max(t_stack *stack, int *min);

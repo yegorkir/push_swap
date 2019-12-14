@@ -94,4 +94,4 @@ add_executable(push_swap
         push_swap/sorter.c
         push_swap/funcs_sort_in_3_groups.c
         push_swap/choose_triple.c
-        push_swap/do_rules_ps.c push_swap/basic_triples_algorithms_b.c)
+        push_swap/do_rules_ps.c push_swap/second_triples_algorithms_b.c)
