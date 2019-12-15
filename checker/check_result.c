@@ -2,9 +2,9 @@
 // Created by Mort Deanne on 09/10/2019.
 //
 
-#include "stack.h"
+#include "ft_stack.h"
 
-_Bool check_ascending(t_stack *stack, int n)
+_Bool check_ascending(t_stk *stack, int n)
 {
 	int prev;
 	int i;
@@ -24,7 +24,7 @@ _Bool check_ascending(t_stack *stack, int n)
 	return (1);
 }
 
-_Bool check_descending(t_stack *stack, int n)
+_Bool check_descending(t_stk *stack, int n)
 {
 	int prev;
 	int i;
@@ -44,7 +44,7 @@ _Bool check_descending(t_stack *stack, int n)
 	return (1);
 }
 
-void check_result(t_stack *a, t_stack *b)
+void check_result(t_stk *a, t_stk *b)
 {
 	if (b || !check_ascending(a, 0))
 	{

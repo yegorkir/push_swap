@@ -2,7 +2,7 @@
 // Created by Mort Deanne on 06/12/2019.
 //
 
-#include "../checker/stack.h"
+#include "ft_stack.h"
 #include "../push_swap/push_swap.h"
 
 
@@ -19,7 +19,7 @@ static _Bool need_break(t_init *init)
 		return (0);
 }
 
-static void	find_notindexed_elem(t_stack *stack, t_init *init)
+static void	find_notindexed_elem(t_stk *stack, t_init *init)
 {
 	while (stack)
 	{
@@ -33,7 +33,7 @@ static void	find_notindexed_elem(t_stack *stack, t_init *init)
 	}
 }
 
-static void init_init(t_stack *stack, t_init *init)
+static void init_init(t_stk *stack, t_init *init)
 {
 	init->min_elem = stack;
 	init->max_elem = stack;
@@ -43,10 +43,10 @@ static void init_init(t_stack *stack, t_init *init)
 	init->max_indx = lst_group_len(stack);
 }
 
-void 	indexing_list(t_stack *stack)
+void 	indexing_list(t_stk *stack)
 {
 	t_init init;
-	t_stack *tmp;
+	t_stk *tmp;
 
 	init_init(stack, &init);
 	while (1)

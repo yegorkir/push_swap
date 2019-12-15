@@ -2,13 +2,13 @@
 // Created by yas on 9/30/19.
 //
 
-#include "stack.h"
+#include "ft_stack.h"
 
 #include <stdio.h>
 
-void	swap_ch(t_stack **head)
+void	swap_ch(t_stk **head)
 {
-	t_stack *prev;
+	t_stk *prev;
 
 	if (head && *head && (*head)->next)
 	{
@@ -19,9 +19,9 @@ void	swap_ch(t_stack **head)
 	}
 }
 
-void	push_ch(t_stack **dst, t_stack **src)
+void	push_ch(t_stk **dst, t_stk **src)
 {
-	t_stack *src_next;
+	t_stk *src_next;
 
 	if (dst && src && *src)
 	{
@@ -32,9 +32,9 @@ void	push_ch(t_stack **dst, t_stack **src)
 	}
 }
 
-void	rotate_ch(t_stack **head)
+void	rotate_ch(t_stk **head)
 {
-	t_stack *tail;
+	t_stk *tail;
 
 	if (head && *head && (*head)->next)
 	{
@@ -47,10 +47,10 @@ void	rotate_ch(t_stack **head)
 	}
 }
 
-void	reverse_rotate_ch(t_stack **head)
+void	reverse_rotate_ch(t_stk **head)
 {
-	t_stack *second;
-	t_stack *pretail;
+	t_stk *second;
+	t_stk *pretail;
 
 	if (head && *head && (*head)->next)
 	{

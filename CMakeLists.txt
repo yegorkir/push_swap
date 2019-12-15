@@ -16,8 +16,8 @@ add_executable(push_swap
         checker/main_checker.c
         checker/perform_rules.c
         checker/read_n_execute.c
-        checker/stack.c
-        checker/stack.h
+        checker/ft_stack.c
+        checker/ft_stack.h
         libft/ft_atoi.c
         libft/ft_bzero.c
         libft/ft_fib.c
@@ -86,12 +86,13 @@ add_executable(push_swap
         libft/get_next_line.c
         libft/get_next_line.h
         libft/libft.h
-        push_swap/third_triple_algorithms.c
+        push_swap/sort_triples.c
+        push_swap/do_rules_ps.c
         push_swap/find_min_max_thirds.c
+        push_swap/funcs_sort_in_3_groups.c
         push_swap/indexing_list.c
         push_swap/main_push_swap.c
         push_swap/push_swap.h
+        push_swap/triple_second_algorithms_b.c
         push_swap/sorter.c
-        push_swap/funcs_sort_in_3_groups.c
-        push_swap/choose_triple.c
-        push_swap/do_rules_ps.c push_swap/second_triples_algorithms_b.c)
+        push_swap/triple_third_algorithms.c push_swap/triple_first_algorithms_b.c push_swap/triple_b_basic_algorithms.c)

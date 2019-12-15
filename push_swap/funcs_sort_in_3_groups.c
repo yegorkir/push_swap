@@ -2,12 +2,12 @@
 // Created by Mort Deanne on 07/12/2019.
 //
 
-#include "../checker/stack.h"
+#include "ft_stack.h"
 #include "../push_swap/push_swap.h"
 
 #include <stdio.h>
 
-void	sort_in_three_groups(t_stack **from, t_stack **to, char name_from)
+void	sort_in_three_groups(t_stk **from, t_stk **to, char name_from)
 {
 	int	third;
 	int	two_thirds;
@@ -36,26 +36,26 @@ void	sort_in_three_groups(t_stack **from, t_stack **to, char name_from)
 	}
 }
 
-/*void	push_rotate_first_third(t_stack **to, t_stack **from, char name_from)
+/*void	push_rotate_first_third(t_stk **to, t_stk **from, char name_from)
 {
 	(*from)->depth = 10 * (*from)->depth + 1;
 	push(to, from);
 	rotate(to);
 }
 
-void	push_second_third(t_stack **to, t_stack **from, char name_from)
+void	push_second_third(t_stk **to, t_stk **from, char name_from)
 {
 	(*from)->depth = 10 * (*from)->depth + 2;
 	push(to, from);
 }
 
-void	rotate_third_third(t_stack **from, char name_from)
+void	rotate_third_third(t_stk **from, char name_from)
 {
 	(*from)->depth = 10 * (*from)->depth + 3;
 	rotate(from);
 }*/
 
-/*void	sort_in_three_groups(t_stack **from, t_stack **to, char name_from)
+/*void	sort_in_three_groups(t_stk **from, t_stk **to, char name_from)
 	{
 	int	third;
 	int	two_thirds;
@@ -74,7 +74,7 @@ void	rotate_third_third(t_stack **from, char name_from)
 	}
 }*/
 
-void 	choose_stack_sort_in_three_groups(t_stack **first, t_stack **second, char name_from)
+void 	choose_stack_sort_in_three_groups(t_stk **first, t_stk **second, char name_from)
 {
 	if (name_from == 'a')
 		sort_in_three_groups(first, second, name_from);

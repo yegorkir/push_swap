@@ -6,12 +6,12 @@
 
 #include "../libft/libft.h"
 #include "../libft/get_next_line.h"
-#include "stack.h"
+#include "ft_stack.h"
 
-void 	perform_rule(char *rule, t_stack **a, t_stack **b);
-void 	check_result(t_stack *a, t_stack *b);
+void 	perform_rule(char *rule, t_stk **a, t_stk **b);
+void 	check_result(t_stk *a, t_stk *b);
 
-#include "stack.h"
+#include "ft_stack.h"
 #define CHECKER_H
 
 #endif //CHECKER_H

@@ -2,10 +2,10 @@
 // Created by mdeanne on 10/9/19.
 //
 
-#include "stack.h"
+#include "ft_stack.h"
 #include "../libft/libft.h"
 
-_Bool if_swap(char *rule, t_stack **a, t_stack **b)
+_Bool if_swap(char *rule, t_stk **a, t_stk **b)
 {
     if (!ft_strcmp(rule, "sa"))
 		swap_ch(a);
@@ -21,7 +21,7 @@ _Bool if_swap(char *rule, t_stack **a, t_stack **b)
 	return (0);
 }
 
-_Bool if_push(char *rule, t_stack **a, t_stack **b)
+_Bool if_push(char *rule, t_stk **a, t_stk **b)
 {
 	if (!ft_strcmp(rule, "pa"))
 		push_ch(a, b);
@@ -32,7 +32,7 @@ _Bool if_push(char *rule, t_stack **a, t_stack **b)
 	return (0);
 }
 
-_Bool if_rotate(char *rule, t_stack **a, t_stack **b)
+_Bool if_rotate(char *rule, t_stk **a, t_stk **b)
 {
 	if (!ft_strcmp(rule, "ra"))
 		rotate_ch(a);
@@ -48,7 +48,7 @@ _Bool if_rotate(char *rule, t_stack **a, t_stack **b)
 	return (0);
 }
 
-_Bool if_reverse_rotate(char *rule, t_stack **a, t_stack **b)
+_Bool if_reverse_rotate(char *rule, t_stk **a, t_stk **b)
 {
 	if (!ft_strcmp(rule, "rra"))
 		reverse_rotate_ch(a);
@@ -64,7 +64,7 @@ _Bool if_reverse_rotate(char *rule, t_stack **a, t_stack **b)
 	return (0);
 }
 
-void perform_rule(char *rule, t_stack **a, t_stack **b)
+void perform_rule(char *rule, t_stk **a, t_stk **b)
 {
 	if(if_swap(rule, a, b) && if_push(rule, a, b) &&
 			if_rotate(rule, a, b) && if_reverse_rotate(rule, a, b))

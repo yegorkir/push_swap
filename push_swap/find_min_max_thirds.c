@@ -2,10 +2,10 @@
 // Created by Mort Deanne on 06/12/2019.
 //
 
-#include "../checker/stack.h"
+#include "ft_stack.h"
 #include "push_swap.h"
 
-int find_min_max_by_num(t_stack *stack, t_init *init)
+int find_min_max_by_num(t_stk *stack, t_init *init)
 {
 
 	while (stack)
@@ -33,7 +33,7 @@ int find_min_max_by_num(t_stack *stack, t_init *init)
 	return (0);
 }
 
-int		lst_group_len(t_stack *stack)
+int		lst_group_len(t_stk *stack)
 {
 	int len;
 	int depth;
@@ -48,7 +48,7 @@ int		lst_group_len(t_stack *stack)
 	return (len);
 }
 
-int		find_min_max(t_stack *stack, int *min)
+int		find_min_max(t_stk *stack, int *min)
 {
 	int depth;
 	int max;
@@ -68,7 +68,7 @@ int		find_min_max(t_stack *stack, int *min)
 	return (max);
 }
 
-int find_thirds(t_stack *stack, int *third, int *two_thirds)
+int find_thirds(t_stk *stack, int *third, int *two_thirds)
 {
 	int modulo;
 	int min;

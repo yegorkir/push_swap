@@ -4,8 +4,8 @@
 /*
 int main(int ac, char **av)
 {
-	t_stack	*a = NULL;
-	t_stack *b = NULL;
+	t_stk	*a = NULL;
+	t_stk *b = NULL;
 	char *line;
 
 	if (ac < 2)

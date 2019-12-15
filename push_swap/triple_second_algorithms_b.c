@@ -4,7 +4,7 @@
 
 #include "push_swap.h"
 
-void min_mid_max_second(t_stack **a, t_stack **b)
+void min_mid_max_second(t_stk **a, t_stk **b)
 {
 	push(a, b);
 	rotate(a);
@@ -14,7 +14,7 @@ void min_mid_max_second(t_stack **a, t_stack **b)
 	reverse_rotate(a);
 }
 
-void max_min_mid_second(t_stack **a, t_stack **b)
+void max_min_mid_second(t_stk **a, t_stk **b)
 {
 	push(a, b);
     swap(b);
@@ -22,7 +22,7 @@ void max_min_mid_second(t_stack **a, t_stack **b)
     push(a, b);
 }
 
-void min_max_mid_second(t_stack **a, t_stack **b)
+void min_max_mid_second(t_stk **a, t_stk **b)
 {
 	push(a, b);
     rotate(a);
@@ -31,7 +31,7 @@ void min_max_mid_second(t_stack **a, t_stack **b)
 	reverse_rotate(a);
 }
 
-void mid_max_min_second(t_stack **a, t_stack **b)
+void mid_max_min_second(t_stk **a, t_stk **b)
 {
 	swap(b);
 	push(a, b);
@@ -39,7 +39,7 @@ void mid_max_min_second(t_stack **a, t_stack **b)
 	push(a, b);
 }
 
-void mid_min_max_second(t_stack **a, t_stack **b)
+void mid_min_max_second(t_stk **a, t_stk **b)
 {
 	push(a, b);
 	rotate(a);

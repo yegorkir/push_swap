@@ -5,9 +5,9 @@
 #include "checker.h"
 #include <limits.h>
 
-void	clear_list(t_stack **head)
+void	clear_list(t_stk **head)
 {
-	t_stack *prev;
+	t_stk *prev;
 
 	if (!head || !*head)
 		//exit (0);
@@ -23,9 +23,9 @@ void	clear_list(t_stack **head)
 	free(prev);
 }
 
-t_stack *create(char *number)
+t_stk *create(char *number)
 {
-	t_stack *new;
+	t_stk *new;
 	long long num;
 	int i;
 
@@ -33,7 +33,7 @@ t_stack *create(char *number)
 	while (number[i])
 		if (!ft_isdigit((int)number[i++]))
 			return (NULL);
-	if(!(new = (t_stack*)malloc(sizeof(t_stack))))
+	if(!(new = (t_stk*)malloc(sizeof(t_stk))))
 		return (NULL);
 	if (((num = ft_ll_atoi(number)) > INT_MAX) || (num < INT_MIN))
 		return (NULL);
@@ -45,7 +45,7 @@ t_stack *create(char *number)
 	return (new);
 }
 
-_Bool push_front(t_stack **head, t_stack *new)
+_Bool push_front(t_stk **head, t_stk *new)
 {
 	if (!head)
 		return (0);

@@ -4,12 +4,12 @@
 
 #include <stdio.h>
 
-#include "../checker/stack.h"
+#include "ft_stack.h"
 #include "../checker/checker.h"
 
 #include "push_swap.h"
 
-void print_list(t_stack *stack)
+void print_list(t_stk *stack)
 {
 	printf("-----------------\n");
 	while (stack)
@@ -22,8 +22,8 @@ void print_list(t_stack *stack)
 
 int main(int ac, char **av)
 {
-	t_stack	*a = NULL;
-	t_stack *b = NULL;
+	t_stk	*a = NULL;
+	t_stk *b = NULL;
 	char *line;
 
 	a = NULL;
