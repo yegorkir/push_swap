@@ -34,26 +34,26 @@ void	reverse_rotate(t_stk **head);
 ** basic_3_algorithms
 */
 
-void mid_min_max_a(t_stk **stack);
-void mid_max_min_a(t_stk **stack);
-void min_max_mid_a(t_stk **stack);
-void max_min_mid_a(t_stk **stack);
-void max_mid_min_a(t_stk **stack);
+void mid_min_max_a_top(t_stk **stack);
+void mid_max_min_a_top(t_stk **stack);
+void min_max_mid_a_top(t_stk **stack);
+void max_min_mid_a_top(t_stk **stack);
+void max_mid_min_a_top(t_stk **stack);
 
-void min_mid_max_second(t_stk **a, t_stk **b);
-void max_min_mid_second(t_stk **a, t_stk **b);
-void min_max_mid_second(t_stk **a, t_stk **b);
-void mid_max_min_second(t_stk **a, t_stk **b);
-void mid_min_max_second(t_stk **a, t_stk **b);
+void min_mid_max_b_top(t_stk **a, t_stk **b);
+void max_min_mid_b_top(t_stk **a, t_stk **b);
+void min_max_mid_b_top(t_stk **a, t_stk **b);
+void mid_max_min_b_top(t_stk **a, t_stk **b);
+void mid_min_max_b_top(t_stk **a, t_stk **b);
 
-void min_mid_max_first(t_stk **a, t_stk **b);
-void max_min_mid_first(t_stk **a, t_stk **b);
-void min_max_mid_first(t_stk **a, t_stk **b);
-void mid_max_min_first(t_stk **a, t_stk **b);
-void mid_min_max_first(t_stk **a, t_stk **b);
+void min_mid_max_b_bottom(t_stk **a, t_stk **b);
+void max_min_mid_b_bottom(t_stk **a, t_stk **b);
+void min_max_mid_b_bottom(t_stk **a, t_stk **b);
+void mid_max_min_b_bottom(t_stk **a, t_stk **b);
+void mid_min_max_b_bottom(t_stk **a, t_stk **b);
 
 void	push_group(t_stk **dst, t_stk **src);
-
+void	reverse_rotate_group(t_stk **stack, t_stk *last_group_stack);
 
 int		find_min_max(t_stk *stack, int *min);
 int		find_min_max_by_num(t_stk *stack, t_init *init);
@@ -62,8 +62,8 @@ int		find_thirds(t_stk *stack, int *third, int *two_thirds);
 
 void 	indexing_list(t_stk *stack);
 
-void 	choose_stack_sort_in_three_groups(t_stk **first, t_stk **second, char name_from);
-void	sort_in_three_groups(t_stk **from, t_stk **to, char name_from);
+void	sort_in_three_groups_a(t_stk **a, t_stk **b);
+void	sort_in_three_groups_b(t_stk **a, t_stk **b);
 
 
 void	sorter(t_stk **first, t_stk **second);

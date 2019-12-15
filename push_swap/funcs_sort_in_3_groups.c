@@ -7,77 +7,60 @@
 
 #include <stdio.h>
 
-void	sort_in_three_groups(t_stk **from, t_stk **to, char name_from)
+void	sort_in_three_groups_a(t_stk **a, t_stk **b)
 {
 	int	third;
 	int	two_thirds;
 	int depth;
 
-	find_thirds(*from, &third, &two_thirds);
-	depth = (*from)->depth;
-	while (from && (*from)->depth == depth)
+	find_thirds(*a, &third, &two_thirds);
+	depth = (*a)->depth;
+	while (a && (*a)->depth == depth)
 	{
-		if ((*from)->index <= third)
+		if ((*a)->index <= third)
 		{
-			(*from)->depth = 10 * (*from)->depth + 1;
-			push(to, from);
-			rotate(to);
+			(*a)->depth = 10 * (*a)->depth + 1;
+			push(b, a);
+			rotate(b);
 		}
-		else if ((*from)->index > two_thirds)
+		else if ((*a)->index > two_thirds)
 		{
-			(*from)->depth = 10 * (*from)->depth + 2;
-			push(to, from);
+			(*a)->depth = 10 * (*a)->depth + 3;
+			rotate(a);
 		}
 		else
 		{
-			(*from)->depth = 10 * (*from)->depth + 3;
-			rotate(from);
+			(*a)->depth = 10 * (*a)->depth + 2;
+			push(b, a);
 		}
 	}
 }
 
-/*void	push_rotate_first_third(t_stk **to, t_stk **from, char name_from)
+void	sort_in_three_groups_b(t_stk **a, t_stk **b)
 {
-	(*from)->depth = 10 * (*from)->depth + 1;
-	push(to, from);
-	rotate(to);
-}
-
-void	push_second_third(t_stk **to, t_stk **from, char name_from)
-{
-	(*from)->depth = 10 * (*from)->depth + 2;
-	push(to, from);
-}
-
-void	rotate_third_third(t_stk **from, char name_from)
-{
-	(*from)->depth = 10 * (*from)->depth + 3;
-	rotate(from);
-}*/
-
-/*void	sort_in_three_groups(t_stk **from, t_stk **to, char name_from)
-	{
 	int	third;
 	int	two_thirds;
 	int depth;
 
-	find_thirds(*from, &third, &two_thirds);
-	depth = (*from)->depth;
-	while (from && (*from)->depth == depth)
+	find_thirds(*b, &third, &two_thirds);
+	depth = (*b)->depth;
+	while (b && (*b)->depth == depth)
 	{
-		if ((*from)->index <= third)
-			push_rotate_first_third(to, from, name_from);
-		else if ((*from)->index > two_thirds)
-			rotate_third_third(from, name_from);
+		if ((*b)->index <= third)
+		{
+			(*b)->depth = 10 * (*b)->depth + 1;
+			push(a, b);
+			rotate(a);
+		}
+		else if ((*b)->index > two_thirds)
+		{
+			(*b)->depth = 10 * (*b)->depth + 3;
+			push(a, b);
+		}
 		else
-			push_second_third(to, from, name_from);
+		{
+			(*b)->depth = 10 * (*b)->depth + 2;
+			rotate(b);
+		}
 	}
-}*/
-
-void 	choose_stack_sort_in_three_groups(t_stk **first, t_stk **second, char name_from)
-{
-	if (name_from == 'a')
-		sort_in_three_groups(first, second, name_from);
-	else
-		sort_in_three_groups(second, first, name_from);
 }

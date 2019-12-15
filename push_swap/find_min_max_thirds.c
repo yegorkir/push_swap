@@ -74,16 +74,7 @@ int find_thirds(t_stk *stack, int *third, int *two_thirds)
 	int min;
 	int max;
 
-	//////
-	if (!stack)
-	{
-		min = 10;
-		max = 21;
-	}
-	else ////
-		max = find_min_max(stack, &min);
-
-
+	max = find_min_max(stack, &min);
 	max -= min - 1;
 	modulo = max % 3;
 	*third = max / 3;

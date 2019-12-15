@@ -13,10 +13,8 @@ void	push_group(t_stk **dst, t_stk **src)
 		push(dst, src);
 }
 
-void	reverse_rotate_group(t_stk **dst, t_stk **src, t_stk *last_group_src)
+void	reverse_rotate_group(t_stk **stack, t_stk *last_group_stack)
 {
-	while (last_group_src->stack_name == (*src)->stack_name)
-	{
-
-	}
+	while (last_group_stack != *stack)
+		reverse_rotate(stack);
 }

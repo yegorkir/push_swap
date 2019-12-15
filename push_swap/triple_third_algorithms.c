@@ -5,12 +5,12 @@
 
 #include "push_swap.h"
 
-void mid_min_max_a(t_stk **stack)
+void mid_min_max_a_top(t_stk **stack)
 {
 	swap(stack); /// A
 }
 
-void mid_max_min_a(t_stk **stack)
+void mid_max_min_a_top(t_stk **stack)
 {
 	rotate(stack); /// E
 	swap(stack);
@@ -18,14 +18,14 @@ void mid_max_min_a(t_stk **stack)
 	swap(stack);
 }
 
-void min_max_mid_a(t_stk **stack)
+void min_max_mid_a_top(t_stk **stack)
 {
 	rotate(stack); /// B
 	swap(stack);
 	reverse_rotate(stack);
 }
 
-void max_min_mid_a(t_stk **stack)
+void max_min_mid_a_top(t_stk **stack)
 {
 		swap(stack); /// C
 		rotate(stack);
@@ -33,7 +33,7 @@ void max_min_mid_a(t_stk **stack)
 		reverse_rotate(stack);
 }
 
-void max_mid_min_a(t_stk **stack)
+void max_mid_min_a_top(t_stk **stack)
 {
 		swap(stack); //D
 		rotate(stack);

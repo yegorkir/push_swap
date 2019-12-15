@@ -14,7 +14,7 @@ void print_list(t_stk *stack)
 	printf("-----------------\n");
 	while (stack)
 	{
-		printf("%d\t%d\n", stack->number, stack->index);
+		printf("%d\t%d\t%d\n", stack->number, stack->depth, stack->index);
 		stack = stack->next;
 	}
 	printf("-----------------\n");
@@ -32,7 +32,14 @@ int main(int ac, char **av)
 
 	indexing_list(a);
 
-	sorter(&a, &b);
+	sort_in_three_groups_a(&a, &b);
+	sort_in_three_groups_a(&a, &b);
+	sort_triples(&a, &b);
+	sort_in_three_groups_b(&a, &b);
+
+
+	print_list(a);
+	print_list(b);
 
 	clear_list(&a);
 	clear_list(&b);
