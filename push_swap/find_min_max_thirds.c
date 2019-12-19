@@ -38,6 +38,8 @@ int		lst_group_len(t_stk *stack)
 	int len;
 	int depth;
 
+	if (!stack)
+		return (0);
 	depth = stack->depth;
 	len = 0;
 	while (stack && depth == stack->depth)

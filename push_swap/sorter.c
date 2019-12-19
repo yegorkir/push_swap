@@ -5,9 +5,33 @@
 #include "ft_stack.h"
 #include "push_swap.h"
 
-void	sorter(t_stk **first, t_stk **second)
+_Bool	is_group_triple(t_stk *a, t_stk *b)
 {
-	while (lst_group_len(*first) > 3)
-		sort_in_three_groups_a(first, second);
+	if (lst_group_len(a) <= 3 &&
+		lst_group_len(find_last_group(a)) <= 3 &&
+		lst_group_len(find_last_group(b)) <= 3)
+		return (1);
+	return (0);
+}
+
+void print_list(t_stk *stack);
+
+void	sorter(t_stk **a, t_stk **b)
+{
+	int i;
+
+	i = 0;
+	while (b|| i == 0)
+	{
+		i++;
+		if (i == 9)
+		{
+			print_list(*a);
+			print_list(*b);
+		}
+		while (!is_group_triple(*a, *b))
+			sort_in_three_groups(a , b);
+		sort_triples(a, b);
+	}
 
 }

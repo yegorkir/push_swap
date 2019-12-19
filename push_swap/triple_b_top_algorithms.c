@@ -12,6 +12,7 @@ void min_mid_max_b_top(t_stk **a, t_stk **b)
 	push(a, b);
 	push(a, b);
 	reverse_rotate(a);
+	set_group_as_sorted(*a);
 }
 
 void max_min_mid_b_top(t_stk **a, t_stk **b)
@@ -20,6 +21,7 @@ void max_min_mid_b_top(t_stk **a, t_stk **b)
     swap(b);
     push(a, b);
     push(a, b);
+	set_group_as_sorted(*a);
 }
 
 void min_max_mid_b_top(t_stk **a, t_stk **b)
@@ -29,6 +31,7 @@ void min_max_mid_b_top(t_stk **a, t_stk **b)
 	push(a, b);
 	push(a, b);
 	reverse_rotate(a);
+	set_group_as_sorted(*a);
 }
 
 void mid_max_min_b_top(t_stk **a, t_stk **b)
@@ -37,6 +40,7 @@ void mid_max_min_b_top(t_stk **a, t_stk **b)
 	push(a, b);
 	push(a, b);
 	push(a, b);
+	set_group_as_sorted(*a);
 }
 
 void mid_min_max_b_top(t_stk **a, t_stk **b)
@@ -47,4 +51,5 @@ void mid_min_max_b_top(t_stk **a, t_stk **b)
 	push(a, b);
 	reverse_rotate(a);
 	push(a, b);
+	set_group_as_sorted(*a);
 }

@@ -10,6 +10,7 @@ typedef struct	s_stk
 	int 			number;
 	int 			index;
 	int				depth;
+	_Bool			is_sort;
 	char 			stack_name;
 	struct s_stk	*next;
 }				t_stk;

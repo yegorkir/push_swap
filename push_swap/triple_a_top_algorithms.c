@@ -5,39 +5,44 @@
 
 #include "push_swap.h"
 
-void mid_min_max_a_top(t_stk **stack)
+void mid_min_max_a_top(t_stk **a)
 {
-	swap(stack); /// A
+	swap(a); /// A
+	set_group_as_sorted(*a);
 }
 
-void mid_max_min_a_top(t_stk **stack)
+void mid_max_min_a_top(t_stk **a)
 {
-	rotate(stack); /// E
-	swap(stack);
-	reverse_rotate(stack);
-	swap(stack);
+	rotate(a); /// E
+	swap(a);
+	reverse_rotate(a);
+	swap(a);
+	set_group_as_sorted(*a);
 }
 
-void min_max_mid_a_top(t_stk **stack)
+void min_max_mid_a_top(t_stk **a)
 {
-	rotate(stack); /// B
-	swap(stack);
-	reverse_rotate(stack);
+	rotate(a); /// B
+	swap(a);
+	reverse_rotate(a);
+	set_group_as_sorted(*a);
 }
 
-void max_min_mid_a_top(t_stk **stack)
+void max_min_mid_a_top(t_stk **a)
 {
-		swap(stack); /// C
-		rotate(stack);
-		swap(stack);
-		reverse_rotate(stack);
+	swap(a); /// C
+	rotate(a);
+	swap(a);
+	reverse_rotate(a);
+	set_group_as_sorted(*a);
 }
 
-void max_mid_min_a_top(t_stk **stack)
+void max_mid_min_a_top(t_stk **a)
 {
-		swap(stack); //D
-		rotate(stack);
-		swap(stack);
-		reverse_rotate(stack);
-		swap(stack);
+	swap(a); //D
+	rotate(a);
+	swap(a);
+	reverse_rotate(a);
+	swap(a);
+	set_group_as_sorted(*a);
 }

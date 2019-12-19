@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.14)
+cmake_minimum_required(VERSION 3.15)
 project(push_swap C)
 
 set(CMAKE_C_STANDARD 11)
@@ -88,15 +88,14 @@ add_executable(push_swap
         libft/libft.h
         push_swap/do_rules_ps.c
         push_swap/find_min_max_thirds.c
-        push_swap/funcs_sort_in_3_groups.c
+        push_swap/sort_in_three_groups.c
         push_swap/indexing_list.c
         push_swap/main_push_swap.c
         push_swap/push_swap.h
         push_swap/sort_triples.c
         push_swap/sorter.c
-        push_swap/triple_b_basic_algorithms.c
-        push_swap/triple_b_bottom_algorithms.c
-        push_swap/triple_b_top_algorithms.c
+        push_swap/triple_a_bottom_algorithms.c
         push_swap/triple_a_top_algorithms.c
-        push_swap/triple_a_bottom_algorithms.c)
-
+        push_swap/triple_basic_algorithms.c
+        push_swap/triple_b_bottom_algorithms.c
+        push_swap/triple_b_top_algorithms.c push_swap/sort_triples_choose_rules.c)
