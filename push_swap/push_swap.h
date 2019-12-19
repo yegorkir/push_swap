@@ -52,13 +52,11 @@ void min_max_mid_b_bottom(t_stk **a, t_stk **b);
 void mid_max_min_b_bottom(t_stk **a, t_stk **b);
 void mid_min_max_b_bottom(t_stk **a, t_stk **b);
 
-
-void min_mid_max_a_bottom(t_stk **a, t_stk **b);
-void max_min_mid_a_bottom(t_stk **a, t_stk **b);
-void min_max_mid_a_bottom(t_stk **a, t_stk **b);
-void mid_max_min_a_bottom(t_stk **a, t_stk **b);
-void mid_min_max_a_bottom(t_stk **a, t_stk **b);
-void max_mid_min_a_bottom(t_stk **a, t_stk **b);
+void max_min_mid_a_bottom(t_stk **a);
+void min_max_mid_a_bottom(t_stk **a);
+void mid_max_min_a_bottom(t_stk **a);
+void mid_min_max_a_bottom(t_stk **a);
+void max_mid_min_a_bottom(t_stk **a);
 
 
 void	push_group(t_stk **dst, t_stk **src);

@@ -19,7 +19,7 @@ t_stk	*find_last_group_b(t_stk *b)
 	return (head_group);
 }
 
-void 	third_triple_algorithm(t_stk **a, t_part *part)
+void 	triple_a_top_algorithm(t_stk **a, t_part *part)
 {
 	if (part->len == 2 && check_descending(*a, part->len)) /// max->min
 		swap(a);
@@ -35,7 +35,28 @@ void 	third_triple_algorithm(t_stk **a, t_part *part)
 		mid_max_min_a_top(a);
 }
 
-void 	second_triple_algorithm(t_stk **a, t_stk **b, t_part *part)
+void triple_a_bottom_algorithm(t_stk **a, t_stk *last_group_a, t_part *part)
+{
+	if (check_descending(last_group_a, part->len))
+		max_mid_min_a_bottom(a);
+	else if (part->max - part->min == 1) /// min->max
+	{
+		reverse_rotate_group(a, last_group_a);
+		swap(a);
+	}
+	else if (check_ascending(last_group_a, part->len))
+		reverse_rotate_group(a, last_group_a);
+	else if (part->max == last_group_a->index)
+		max_min_mid_a_bottom(a);
+	else if (part->min == last_group_a->index)
+		min_max_mid_a_bottom(a);
+	else if (part->max == last_group_a->next->index)
+		mid_max_min_a_bottom(a);
+	else if (part->min == last_group_a->next->index)
+		mid_min_max_a_bottom(a);
+}
+
+void 	triple_b_top_algorithm(t_stk **a, t_stk **b, t_part *part)
 {
 	if (part->max - part->min == 1) /// min->max
 	{
@@ -54,7 +75,8 @@ void 	second_triple_algorithm(t_stk **a, t_stk **b, t_part *part)
 		mid_min_max_b_top(a, b);
 }
 
-void 	first_triple_algorithm(t_stk **a, t_stk **b, t_stk *last_group_b, t_part *part)
+void 	triple_b_bottom_algorithm(t_stk **a, t_stk **b, t_stk *last_group_b,
+								  t_part *part)
 {
 	if (check_descending(last_group_b, part->len))
 	{
@@ -87,11 +109,11 @@ void sort_triples(t_stk **a, t_stk **b)
 	part.max = find_min_max(*a, &part.min);
 	part.len = lst_group_len(*a);
 	if (part.len != 1 && !check_ascending(*a, part.len))
-		third_triple_algorithm(a, &part);
+		triple_a_top_algorithm(a, &part);
 	part.max = find_min_max(*b, &part.min);
 	part.len = lst_group_len(*b);
 	if (part.len != 1 && !check_descending(*b, part.len))
-		second_triple_algorithm(a, b, &part);
+		triple_b_top_algorithm(a, b, &part);
 	else
 		push_group(a, b);
 
@@ -99,7 +121,7 @@ void sort_triples(t_stk **a, t_stk **b)
 	part.max = find_min_max(last_group_b, &part.min);
 	part.len = lst_group_len(last_group_b);
 	if (part.len != 1 && !check_descending(last_group_b, part.len))
-		first_triple_algorithm(a, b, last_group_b, &part);
+		triple_b_bottom_algorithm(a, b, last_group_b, &part);
 	else
 	{
 		reverse_rotate_group(b, last_group_b);

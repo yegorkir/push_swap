@@ -4,14 +4,8 @@
 
 #include "push_swap.h"
 
-void min_mid_max_a_bottom(t_stk **a, t_stk **b)
-{
-	reverse_rotate(a);
-	reverse_rotate(a);
-	reverse_rotate(a);
-}
 
-void max_min_mid_a_bottom(t_stk **a, t_stk **b)
+void max_min_mid_a_bottom(t_stk **a)
 {
 	reverse_rotate(a);
 	reverse_rotate(a);
@@ -22,7 +16,7 @@ void max_min_mid_a_bottom(t_stk **a, t_stk **b)
 	reverse_rotate(a);
 }
 
-void min_max_mid_a_bottom(t_stk **a, t_stk **b)
+void min_max_mid_a_bottom(t_stk **a)
 {
 	reverse_rotate(a);
 	reverse_rotate(a);
@@ -30,7 +24,7 @@ void min_max_mid_a_bottom(t_stk **a, t_stk **b)
 	reverse_rotate(a);
 }
 
-void mid_max_min_a_bottom(t_stk **a, t_stk **b)
+void mid_max_min_a_bottom(t_stk **a)
 {
 	reverse_rotate(a);
 	reverse_rotate(a);
@@ -39,7 +33,7 @@ void mid_max_min_a_bottom(t_stk **a, t_stk **b)
 	swap(a);
 }
 
-void mid_min_max_a_bottom(t_stk **a, t_stk **b)
+void mid_min_max_a_bottom(t_stk **a)
 {
 	reverse_rotate(a);
 	reverse_rotate(a);
@@ -47,7 +41,7 @@ void mid_min_max_a_bottom(t_stk **a, t_stk **b)
 	swap(a);
 }
 
-void max_mid_min_a_bottom(t_stk **a, t_stk **b)
+void max_mid_min_a_bottom(t_stk **a)
 {
 	reverse_rotate(a);
 	reverse_rotate(a);
