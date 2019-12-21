@@ -7,7 +7,9 @@
 
 void 	triple_a_top_algo(t_stk **a, t_part *part)
 {
-	if (part->len == 2 && check_descending(*a, part->len)) /// max->min
+	if (check_ascending(*a, part->len))
+		set_group_as_sorted(*a);
+	else if (part->len == 2 && check_descending(*a, part->len)) /// max->min
 	{
 		swap(a);
 		set_group_as_sorted(*a);
@@ -26,14 +28,20 @@ void 	triple_a_top_algo(t_stk **a, t_part *part)
 
 void triple_a_bottom_algo(t_stk **a, t_stk *last_group_a, t_part *part)
 {
-	if (check_descending(last_group_a, part->len))
-		max_mid_min_a_bottom(a);
+	if (part->len == 1)
+	{
+		reverse_rotate(a);
+		last_group_a->is_sort = 1;
+	}
 	else if (part->max - part->min == 1) /// min->max
 	{
 		reverse_rotate_group(a, last_group_a);
-		swap(a);
+		if ((*a)->index - (*a)->next->index == 1)
+			swap(a);
 		set_group_as_sorted(*a);
 	}
+	else if (check_descending(last_group_a, part->len))
+		max_mid_min_a_bottom(a);
 	else if (check_ascending(last_group_a, part->len))
 		reverse_rotate_group(a, last_group_a);
 	else if (part->max == last_group_a->index)
@@ -48,13 +56,19 @@ void triple_a_bottom_algo(t_stk **a, t_stk *last_group_a, t_part *part)
 
 void 	triple_b_top_algo(t_stk **a, t_stk **b, t_part *part)
 {
+	if (part->len == 1)
+	{
+		push(a, b);
+		(*a)->is_sort = 1;
+	}
 	if (part->max - part->min == 1) /// min->max
 	{
-		swap(b);
+		if ((*a)->index - (*a)->next->index == 1)
+			swap(b);
 		push_group(a, b);
 		set_group_as_sorted(*a);
 	}
-	else if (part->max == (*b)->index && part->min != (*b)->next->index)
+	else if (part->len > 1 && part->max == (*b)->index && part->min != (*b)->next->index)
 	{
 		push_group(a, b);
 		set_group_as_sorted(*a);

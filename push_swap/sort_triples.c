@@ -22,6 +22,7 @@ t_stk	*find_last_group(t_stk *stack)
 
 void sort_triples(t_stk **a, t_stk **b)
 {
+
 	t_stk	*sort_group;
 	int 	i;
 	t_part	part;
@@ -31,6 +32,8 @@ void sort_triples(t_stk **a, t_stk **b)
 	{
 		if (!(sort_group = find_max_depth_not_sorted_elem(*a, *b)))
 			return ;
+		else if (lst_group_len(sort_group) > 3)
+			break ;
 		part.max = find_min_max(sort_group, &part.min);
 		part.len = lst_group_len(sort_group);
 		if (sort_group->stack_name == 'a')

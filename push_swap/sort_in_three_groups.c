@@ -55,22 +55,28 @@ void sorting_group_a(t_stk **a, t_stk **b, t_stk *sort_elem, t_groups *grp)
 	while ((on_top && *a && (*a)->depth == grp->depth) ||
 		   (!on_top && sort_elem->depth == grp->depth))
 	{
-		if (sort_elem->index > grp->two_thirds)
+/*		if (sort_elem->index == 67)
 		{
-			sort_elem->depth = sort_elem->depth * 10 + 3;
-			on_top ? rotate(a) : reverse_rotate(a);
-		}
-		else
+			print_lists(*a, *b);
+		}*/
+		if (!on_top)
+			reverse_rotate(a);
+		if (on_top && sort_elem->index >= grp->two_thirds)
+			rotate(a);
+		else if (sort_elem->index <= grp->two_thirds)
 		{
 			push(b, a);
 			if (sort_elem->index <= grp->third)
 			{
-				sort_elem->depth = sort_elem->depth * 10 + 1;
 				rotate(b);
 			}
-			else
-				sort_elem->depth = sort_elem->depth * 10 + 2;
 		}
+		if (sort_elem->index >= grp->two_thirds)
+			sort_elem->depth = sort_elem->depth * 10 + 3;
+		else if (sort_elem->index <= grp->third)
+			sort_elem->depth = sort_elem->depth * 10 + 1;
+		else
+			sort_elem->depth = sort_elem->depth * 10 + 2;
 		sort_elem = (on_top) ? *a : find_last_elem(*a);
 	}
 }
@@ -85,17 +91,19 @@ void sorting_group_b(t_stk **a, t_stk **b, t_stk *sort_elem, t_groups *grp)
 	while ((on_top && *b && (*b)->depth == grp->depth) ||
 		   (!on_top && sort_elem->depth == grp->depth))
 	{
-		if (sort_elem->index <= grp->third)
-			(on_top) ? rotate(b) : reverse_rotate(b);
-		else
+		if (!on_top)
+			reverse_rotate(b);
+		if (on_top && sort_elem->index <= grp->third)
+			rotate(b);
+		else if (sort_elem->index > grp->third)
 		{
 			push(a, b);
-			if (sort_elem->index <= grp->two_thirds)
+			if (sort_elem->index < grp->two_thirds)
 				rotate(a);
 		}
 		if (sort_elem->index <= grp->third)
 			sort_elem->depth = sort_elem->depth * 10 + 1;
-		else if (sort_elem->index > grp->two_thirds)
+		else if (sort_elem->index >= grp->two_thirds)
 			sort_elem->depth = sort_elem->depth * 10 + 3;
 		else
 			sort_elem->depth = sort_elem->depth * 10 + 2;

@@ -9,6 +9,8 @@
 
 #include "push_swap.h"
 
+
+
 void print_list(t_stk *stack)
 {
 	printf("-----------------\n");
@@ -17,10 +19,16 @@ void print_list(t_stk *stack)
 	while (stack)
 	{
 		i++;
-		printf("%d\t%d\t\t%d\t%d\n", stack->number, stack->depth, stack->index, stack->is_sort);
+		printf("%d\t\t%d\t%d\n", stack->is_sort, stack->index, stack->depth);
 		stack = stack->next;
 	}
 	printf("-----------------\n");
+}
+
+void print_lists(t_stk *a, t_stk *b)
+{
+	print_list(a);
+	print_list(b);
 }
 
 int main(int ac, char **av)

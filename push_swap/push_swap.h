@@ -7,6 +7,9 @@
 
 #include "ft_stack.h"
 
+/////////////
+#include <stdio.h>
+/////////////
 
 typedef struct	s_init
 {
@@ -96,5 +99,8 @@ void	sorter(t_stk **a, t_stk **b);
 t_stk	*find_last_elem(t_stk *stack);
 
 
+
+void print_list(t_stk *stack);
+void print_lists(t_stk *a, t_stk *b);
 
 #endif //CHECKER_PUSH_SWAP_H
