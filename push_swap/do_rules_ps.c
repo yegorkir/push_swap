@@ -18,6 +18,9 @@ void	swap(t_stk **head)
 		*head = (*head)->next;
 		prev->next = (*head)->next;
 		(*head)->next = prev;
+		prev->next->prev = prev;
+		prev->prev = *head;
+		(*head)->prev = NULL;
 	}
 }
 
@@ -34,6 +37,9 @@ void	push(t_stk **dst, t_stk **src)
 		(*src)->next = *dst;
 		*dst = *src;
 		*src = src_next;
+		(*src)->prev = NULL;
+		if ((*dst)->next)
+			(*dst)->next->prev = *dst;
 	}
 }
 
@@ -51,6 +57,8 @@ void	rotate(t_stk **head)
 		tail->next = *head;
 		*head = (*head)->next;
 		tail->next->next = NULL;
+		tail->next->prev = tail;
+		(*head)->prev = NULL;
 	}
 }
 

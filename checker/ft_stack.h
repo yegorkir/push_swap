@@ -13,6 +13,7 @@ typedef struct	s_stk
 	_Bool			is_sort;
 	char 			stack_name;
 	struct s_stk	*next;
+	struct s_stk	*prev;
 }				t_stk;
 
 

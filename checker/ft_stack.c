@@ -42,6 +42,7 @@ t_stk *create(char *number)
 	new->index = 0;
 	new->stack_name = 'a';
 	new->next = NULL;
+	new->prev = NULL;
 	return (new);
 }
 
@@ -52,7 +53,10 @@ _Bool push_front(t_stk **head, t_stk *new)
 	if (!new)
 		clear_list(head);
 	if (*head)
+	{
 		new->next = *head;
+		(*head)->prev = new;
+	}
 	*head = new;
 	return (1);
 }
