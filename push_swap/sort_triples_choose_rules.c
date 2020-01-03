@@ -61,7 +61,7 @@ void 	triple_b_top_algo(t_stk **a, t_stk **b, t_part *part)
 		push(a, b);
 		(*a)->is_sort = 1;
 	}
-	if (part->max - part->min == 1) /// min->max
+	else if (part->max - part->min == 1) /// min->max
 	{
 		if ((*a)->index - (*a)->next->index == 1)
 			swap(b);

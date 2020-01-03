@@ -12,12 +12,9 @@ _Bool	is_group_triple(t_stk *a, t_stk *b)
 	return (0);
 }
 
-void print_list(t_stk *stack);
-
 void	sorter(t_stk **a, t_stk **b)
 {
 	int i;
-	int step = 15;
 
 	i = 0;
 	while (b|| i == 0)

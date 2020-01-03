@@ -31,7 +31,7 @@ t_stk *create(char *number)
 
 	i = 0;
 	while (number[i])
-		if (!ft_isdigit((int)number[i++]))
+		if (!ft_isdigit((int)number[i++]) && number[i - 1] != '-')
 			return (NULL);
 	if(!(new = (t_stk*)malloc(sizeof(t_stk))))
 		return (NULL);

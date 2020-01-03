@@ -102,5 +102,7 @@ t_stk	*find_last_elem(t_stk *stack);
 
 void print_list(t_stk *stack);
 void print_lists(t_stk *a, t_stk *b);
+void print_top_bottom_groups(t_stk *a, t_stk *b);
+void print_group(t_stk *stack);
 
 #endif //CHECKER_PUSH_SWAP_H
