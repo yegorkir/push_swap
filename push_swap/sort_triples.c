@@ -1,9 +1,16 @@
-//
-// Created by Mort Deanne on 07/12/2019.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sort_triples.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mdeanne <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/01/04 18:37:39 by mdeanne           #+#    #+#             */
+/*   Updated: 2020/01/04 18:37:40 by mdeanne          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include "ft_stack.h"
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 t_stk	*find_last_group(t_stk *stack)
 {
@@ -19,12 +26,28 @@ t_stk	*find_last_group(t_stk *stack)
 	return (head_group);
 }
 
-
-void sort_triples(t_stk **a, t_stk **b)
+void	choose_stack_part(t_stk **a, t_stk **b, t_stk *sort_group, t_part *part)
 {
+	if (sort_group->stack_name == 'a')
+	{
+		if (sort_group == *a)
+			triple_a_top_algo(a, part);
+		else
+			triple_a_bottom_algo(a, sort_group, part);
+	}
+	else
+	{
+		if (sort_group == *b)
+			triple_b_top_algo(a, b, part);
+		else
+			triple_b_bottom_algo(a, b, sort_group, part);
+	}
+}
 
+void	sort_triples(t_stk **a, t_stk **b)
+{
 	t_stk	*sort_group;
-	int 	i;
+	int		i;
 	t_part	part;
 
 	i = 0;
@@ -36,19 +59,6 @@ void sort_triples(t_stk **a, t_stk **b)
 			break ;
 		part.max = find_min_max(sort_group, &part.min);
 		part.len = lst_group_len(sort_group);
-		if (sort_group->stack_name == 'a')
-		{
-			if (sort_group == *a)
-				triple_a_top_algo(a, &part);
-			else
-				triple_a_bottom_algo(a, sort_group, &part);
-		}
-		else
-		{
-			if (sort_group == *b)
-				triple_b_top_algo(a, b, &part);
-			else
-				triple_b_bottom_algo(a, b, sort_group, &part);
-		}
+		choose_stack_part(a, b, sort_group, &part);
 	}
 }

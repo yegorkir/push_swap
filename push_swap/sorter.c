@@ -1,9 +1,16 @@
-//
-// Created by Mort Deanne on 07/12/2019.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sorter.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mdeanne <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/01/04 18:37:50 by mdeanne           #+#    #+#             */
+/*   Updated: 2020/01/04 18:37:52 by mdeanne          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include "ft_stack.h"
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 _Bool	is_group_triple(t_stk *a, t_stk *b)
 {
@@ -14,22 +21,16 @@ _Bool	is_group_triple(t_stk *a, t_stk *b)
 
 void	sorter(t_stk **a, t_stk **b)
 {
-	int i;
+	int flag;
 
-	i = 0;
-	while (b|| i == 0)
+	flag = 0;
+	while (b || flag == 0)
 	{
-		i++;
+		flag++;
 		while (!is_group_triple(*a, *b))
-		{
 			sort_in_three_groups(a, b);
-		}
-
 		if (!*b || !*a)
 			return ;
-		if (i == 24)
-			i = i;
 		sort_triples(a, b);
 	}
-
 }

@@ -1,10 +1,16 @@
-//
-// Created by yas on 9/30/19.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   do_rules_checker.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mdeanne <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/01/04 18:35:33 by mdeanne           #+#    #+#             */
+/*   Updated: 2020/01/04 18:35:36 by mdeanne          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include "ft_stack.h"
-
-#include <stdio.h>
+#include "../includes/ft_stack.h"
 
 void	swap_ch(t_stk **head)
 {
@@ -63,4 +69,3 @@ void	reverse_rotate_ch(t_stk **head)
 		(*head)->next = second;
 	}
 }
-

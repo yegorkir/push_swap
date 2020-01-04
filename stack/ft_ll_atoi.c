@@ -6,11 +6,11 @@
 /*   By: mdeanne <mdeanne@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/08 19:32:07 by mdeanne           #+#    #+#             */
-/*   Updated: 2019/12/16 18:25:24 by yas              ###   ########.fr       */
+/*   Updated: 2020/01/04 18:35:43 by mdeanne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "libft.h"
 
 long long		ft_ll_atoi(const char *str)
 {

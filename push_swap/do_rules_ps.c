@@ -1,20 +1,33 @@
-//
-// Created by yas on 9/30/19.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   do_rules_ps.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mdeanne <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/01/04 18:36:49 by mdeanne           #+#    #+#             */
+/*   Updated: 2020/01/04 18:36:53 by mdeanne          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include "ft_stack.h"
+#include "../includes/push_swap.h"
+#include <unistd.h>
+#include <libft.h>
 
-#include <stdio.h>
+void	put_rule(char *rule_name, char stack_name)
+{
+	write(1, rule_name, ft_strlen(rule_name));
+	write(1, &stack_name, 1);
+	write(1, "\n", 1);
+}
 
 void	swap(t_stk **head)
 {
 	t_stk *prev;
 
-
-
 	if (head && *head && (*head)->next)
 	{
-		printf("s%c\n", (*head)->stack_name);
+		put_rule("s", (*head)->stack_name);
 		prev = *head;
 		*head = (*head)->next;
 		prev->next = (*head)->next;
@@ -30,11 +43,9 @@ void	push(t_stk **dst, t_stk **src)
 {
 	t_stk *src_next;
 
-
-
 	if (dst && src && *src)
 	{
-		printf("p%c\n", (*src)->stack_name == 'a' ? 'b' : 'a');
+		put_rule("p", (*src)->stack_name == 'a' ? 'b' : 'a');
 		(*src)->stack_name = ((*src)->stack_name == 'a') ? 'b' : 'a';
 		src_next = (*src)->next;
 		(*src)->next = *dst;
@@ -47,20 +58,13 @@ void	push(t_stk **dst, t_stk **src)
 	}
 }
 
-t_stk *give_tail(t_stk *head)
-{
-	while(head->next)
-		head = head->next;
-	return (head);
-}
-
 void	rotate(t_stk **head)
 {
 	t_stk *tail;
 
 	if (head && *head && (*head)->next)
 	{
-		printf("r%c\n", (*head)->stack_name);
+		put_rule("r", (*head)->stack_name);
 		tail = *head;
 		while (tail->next)
 			tail = tail->next;
@@ -80,7 +84,7 @@ void	reverse_rotate(t_stk **head)
 
 	if (head && *head && (*head)->next)
 	{
-		printf("rr%c\n", (*head)->stack_name);
+		put_rule("rr", (*head)->stack_name);
 		pretail = *head;
 		second = *head;
 		while (pretail->next->next)
@@ -92,4 +96,3 @@ void	reverse_rotate(t_stk **head)
 		(*head)->prev = NULL;
 	}
 }
-

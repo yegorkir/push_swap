@@ -96,7 +96,7 @@ int				ft_islower(int c);
 int				ft_fib(int n);
 int				ft_sqrt(int num, _Bool precision);
 
-int		ft_isdigit(int c);
-int		ft_isspace(int c);
+int				ft_isdigit(int c);
+int				ft_isspace(int c);
 
 #endif

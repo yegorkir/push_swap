@@ -1,57 +1,23 @@
-//
-// Created by Mort Deanne on 09/10/2019.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   check_result.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mdeanne <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/01/04 18:35:14 by mdeanne           #+#    #+#             */
+/*   Updated: 2020/01/04 18:35:18 by mdeanne          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include "ft_stack.h"
+#include "../includes/ft_stack.h"
 
-_Bool check_ascending(t_stk *stack, int n)
+void	check_result(t_stk **a, t_stk **b)
 {
-	int prev;
-	int i;
-
-	if (!stack)
-		return (1);
-	prev = stack->number;
-	stack = stack->next;
-	i = 1;
-	while (stack && (!n || i < n))
+	if (*b || !check_ascending(*a, 0))
 	{
-		if (stack->number < prev)
-			return (0);
-		prev = stack->number;
-		stack = stack->next;
-		i++;
-	}
-	return (1);
-}
-
-_Bool check_descending(t_stk *stack, int n)
-{
-	int prev;
-	int i;
-
-	if (!stack)
-		return (1);
-	prev = stack->number;
-	stack = stack->next;
-	i = 1;
-	while (stack && (!n || i < n))
-	{
-		if (stack->number > prev)
-			return (0);
-		prev = stack->number;
-		stack = stack->next;
-		i++;
-	}
-	return (1);
-}
-
-void check_result(t_stk *a, t_stk *b)
-{
-	if (b || !check_ascending(a, 0))
-	{
-		clear_list(&a);
-		clear_list(&b);
+		clear_list(a);
+		clear_list(b);
 		go_exit(1);
 	}
 }

@@ -1,10 +1,18 @@
-//
-// Created by Mort Deanne on 15/12/2019.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   triple_b_bottom_algorithms.c                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mdeanne <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/01/04 19:33:51 by mdeanne           #+#    #+#             */
+/*   Updated: 2020/01/04 19:33:53 by mdeanne          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
-void min_mid_max_b_bottom(t_stk **a, t_stk **b)
+void	min_mid_max_b_bottom(t_stk **a, t_stk **b)
 {
 	reverse_rotate(b);
 	push(a, b);
@@ -16,7 +24,7 @@ void min_mid_max_b_bottom(t_stk **a, t_stk **b)
 	set_group_as_sorted(*a);
 }
 
-void max_min_mid_b_bottom(t_stk **a, t_stk **b)
+void	max_min_mid_b_bottom(t_stk **a, t_stk **b)
 {
 	reverse_rotate(b);
 	reverse_rotate(b);
@@ -28,7 +36,7 @@ void max_min_mid_b_bottom(t_stk **a, t_stk **b)
 	set_group_as_sorted(*a);
 }
 
-void min_max_mid_b_bottom(t_stk **a, t_stk **b)
+void	min_max_mid_b_bottom(t_stk **a, t_stk **b)
 {
 	reverse_rotate(b);
 	reverse_rotate(b);
@@ -39,7 +47,7 @@ void min_max_mid_b_bottom(t_stk **a, t_stk **b)
 	set_group_as_sorted(*a);
 }
 
-void mid_max_min_b_bottom(t_stk **a, t_stk **b)
+void	mid_max_min_b_bottom(t_stk **a, t_stk **b)
 {
 	reverse_rotate(b);
 	reverse_rotate(b);
@@ -50,7 +58,7 @@ void mid_max_min_b_bottom(t_stk **a, t_stk **b)
 	set_group_as_sorted(*a);
 }
 
-void mid_min_max_b_bottom(t_stk **a, t_stk **b)
+void	mid_min_max_b_bottom(t_stk **a, t_stk **b)
 {
 	reverse_rotate(b);
 	push(a, b);

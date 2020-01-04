@@ -1,27 +1,36 @@
-//
-// Created by mdeanne on 10/9/19.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   perform_rules.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mdeanne <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/01/04 18:36:23 by mdeanne           #+#    #+#             */
+/*   Updated: 2020/01/04 18:36:27 by mdeanne          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include "ft_stack.h"
-#include "../libft/libft.h"
+#include "../includes/ft_stack.h"
+#include "../includes/checker.h"
+#include "libft.h"
 
-_Bool if_swap(char *rule, t_stk **a, t_stk **b)
+_Bool	if_swap(char *rule, t_stk **a, t_stk **b)
 {
-    if (!ft_strcmp(rule, "sa"))
+	if (!ft_strcmp(rule, "sa"))
 		swap_ch(a);
-    else if (!ft_strcmp(rule, "sb"))
+	else if (!ft_strcmp(rule, "sb"))
 		swap_ch(b);
-    else if (!ft_strcmp(rule, "ss"))
-    {
+	else if (!ft_strcmp(rule, "ss"))
+	{
 		swap_ch(a);
 		swap_ch(b);
-    }
+	}
 	else
 		return (1);
 	return (0);
 }
 
-_Bool if_push(char *rule, t_stk **a, t_stk **b)
+_Bool	if_push(char *rule, t_stk **a, t_stk **b)
 {
 	if (!ft_strcmp(rule, "pa"))
 		push_ch(a, b);
@@ -32,7 +41,7 @@ _Bool if_push(char *rule, t_stk **a, t_stk **b)
 	return (0);
 }
 
-_Bool if_rotate(char *rule, t_stk **a, t_stk **b)
+_Bool	if_rotate(char *rule, t_stk **a, t_stk **b)
 {
 	if (!ft_strcmp(rule, "ra"))
 		rotate_ch(a);
@@ -48,7 +57,7 @@ _Bool if_rotate(char *rule, t_stk **a, t_stk **b)
 	return (0);
 }
 
-_Bool if_reverse_rotate(char *rule, t_stk **a, t_stk **b)
+_Bool	if_reverse_rotate(char *rule, t_stk **a, t_stk **b)
 {
 	if (!ft_strcmp(rule, "rra"))
 		reverse_rotate_ch(a);
@@ -64,14 +73,13 @@ _Bool if_reverse_rotate(char *rule, t_stk **a, t_stk **b)
 	return (0);
 }
 
-void perform_rule(char *rule, t_stk **a, t_stk **b)
+void	perform_rule(char *rule, t_stk **a, t_stk **b)
 {
-	if(if_swap(rule, a, b) && if_push(rule, a, b) &&
+	if (if_swap(rule, a, b) && if_push(rule, a, b) &&
 			if_rotate(rule, a, b) && if_reverse_rotate(rule, a, b))
 	{
 		clear_list(a);
 		clear_list(b);
 		go_exit(1);
 	}
-    ////else stop&free&return KO
 }

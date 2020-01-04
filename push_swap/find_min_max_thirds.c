@@ -1,13 +1,19 @@
-//
-// Created by Mort Deanne on 06/12/2019.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   find_min_max_thirds.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mdeanne <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/01/04 18:36:57 by mdeanne           #+#    #+#             */
+/*   Updated: 2020/01/04 18:36:59 by mdeanne          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include "ft_stack.h"
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
-int find_min_max_by_num(t_stk *stack, t_init *init)
+int		find_min_max_by_num(t_stk *stack, t_init *init)
 {
-
 	while (stack)
 	{
 		if (!stack->index)
@@ -19,7 +25,6 @@ int find_min_max_by_num(t_stk *stack, t_init *init)
 		}
 		stack = stack->next;
 	}
-
 	if (!init->min_elem->index)
 	{
 		init->min_elem->index = init->min_indx;
@@ -66,11 +71,10 @@ int		find_min_max(t_stk *stack, int *min)
 			max = stack->index;
 		stack = stack->next;
 	}
-
 	return (max);
 }
 
-int find_thirds(t_stk *stack, int *third, int *two_thirds)
+int		find_thirds(t_stk *stack, int *third, int *two_thirds)
 {
 	int modulo;
 	int min;
@@ -91,4 +95,11 @@ int find_thirds(t_stk *stack, int *third, int *two_thirds)
 	*third += min - 1;
 	*two_thirds += min - 1;
 	return (0);
+}
+
+t_stk	*find_last_elem(t_stk *stack)
+{
+	while (stack->next)
+		stack = stack->next;
+	return (stack);
 }

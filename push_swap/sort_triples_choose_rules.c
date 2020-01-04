@@ -1,15 +1,22 @@
-//
-// Created by Mort Deanne on 19/12/2019.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sort_triples_choose_rules.c                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mdeanne <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/01/04 18:37:44 by mdeanne           #+#    #+#             */
+/*   Updated: 2020/01/04 18:37:46 by mdeanne          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <ft_stack.h>
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
-void 	triple_a_top_algo(t_stk **a, t_part *part)
+void		triple_a_top_algo(t_stk **a, t_part *part)
 {
 	if (check_ascending(*a, part->len))
 		set_group_as_sorted(*a);
-	else if (part->len == 2 && check_descending(*a, part->len)) /// max->min
+	else if (part->len == 2 && check_descending(*a, part->len))
 	{
 		swap(a);
 		set_group_as_sorted(*a);
@@ -26,14 +33,14 @@ void 	triple_a_top_algo(t_stk **a, t_part *part)
 		mid_max_min_a_top(a);
 }
 
-void triple_a_bottom_algo(t_stk **a, t_stk *last_group_a, t_part *part)
+void		triple_a_bottom_algo(t_stk **a, t_stk *last_group_a, t_part *part)
 {
 	if (part->len == 1)
 	{
 		reverse_rotate(a);
 		last_group_a->is_sort = 1;
 	}
-	else if (part->max - part->min == 1) /// min->max
+	else if (part->max - part->min == 1)
 	{
 		reverse_rotate_group(a, last_group_a);
 		if ((*a)->index - (*a)->next->index == 1)
@@ -54,21 +61,25 @@ void triple_a_bottom_algo(t_stk **a, t_stk *last_group_a, t_part *part)
 		mid_min_max_a_bottom(a);
 }
 
-void 	triple_b_top_algo(t_stk **a, t_stk **b, t_part *part)
+static void	pa_one_elem(t_stk **a, t_stk **b)
+{
+	push(a, b);
+	(*a)->is_sort = 1;
+}
+
+void		triple_b_top_algo(t_stk **a, t_stk **b, t_part *part)
 {
 	if (part->len == 1)
+		pa_one_elem(a, b);
+	else if (part->max - part->min == 1)
 	{
-		push(a, b);
-		(*a)->is_sort = 1;
-	}
-	else if (part->max - part->min == 1) /// min->max
-	{
-		if ((*a)->index - (*a)->next->index == 1)
+		if ((*b)->index - (*b)->next->index == -1)
 			swap(b);
 		push_group(a, b);
 		set_group_as_sorted(*a);
 	}
-	else if (part->len > 1 && part->max == (*b)->index && part->min != (*b)->next->index)
+	else if (part->len > 1 && part->max == (*b)->index &&
+											part->min != (*b)->next->index)
 	{
 		push_group(a, b);
 		set_group_as_sorted(*a);
@@ -85,8 +96,8 @@ void 	triple_b_top_algo(t_stk **a, t_stk **b, t_part *part)
 		mid_min_max_b_top(a, b);
 }
 
-void 	triple_b_bottom_algo(t_stk **a, t_stk **b, t_stk *last_group_b,
-							 t_part *part)
+void		triple_b_bottom_algo(t_stk **a, t_stk **b, t_stk *last_group_b,
+																t_part *part)
 {
 	if (check_descending(last_group_b, part->len))
 	{
@@ -94,7 +105,7 @@ void 	triple_b_bottom_algo(t_stk **a, t_stk **b, t_stk *last_group_b,
 		push_group(a, b);
 		set_group_as_sorted(*a);
 	}
-	else if (part->max - part->min == 1) /// min->max
+	else if (part->max - part->min == 1)
 	{
 		reverse_rotate_group(b, last_group_b);
 		swap(b);

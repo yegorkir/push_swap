@@ -1,12 +1,18 @@
-//
-// Created by Mort Deanne on 06/12/2019.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   indexing_list.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mdeanne <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/01/04 18:37:07 by mdeanne           #+#    #+#             */
+/*   Updated: 2020/01/04 18:37:09 by mdeanne          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include "ft_stack.h"
-#include "../push_swap/push_swap.h"
+#include "../includes/push_swap.h"
 
-
-static _Bool need_break(t_init *init)
+static _Bool	need_break(t_init *init)
 {
 	if (init->min_elem == init->min_last_elem &&
 		init->max_elem == init->max_last_elem)
@@ -16,10 +22,10 @@ static _Bool need_break(t_init *init)
 		init->min_last_elem = init->min_elem;
 		init->max_last_elem = init->max_elem;
 	}
-		return (0);
+	return (0);
 }
 
-static void	find_notindexed_elem(t_stk *stack, t_init *init)
+static void		find_notindexed_elem(t_stk *stack, t_init *init)
 {
 	while (stack)
 	{
@@ -33,7 +39,7 @@ static void	find_notindexed_elem(t_stk *stack, t_init *init)
 	}
 }
 
-static void init_init(t_stk *stack, t_init *init)
+static void		init_init(t_stk *stack, t_init *init)
 {
 	init->min_elem = stack;
 	init->max_elem = stack;
@@ -43,10 +49,9 @@ static void init_init(t_stk *stack, t_init *init)
 	init->max_indx = lst_group_len(stack);
 }
 
-void 	indexing_list(t_stk *stack)
+void			indexing_list(t_stk *stack)
 {
 	t_init init;
-	t_stk *tmp;
 
 	init_init(stack, &init);
 	while (1)

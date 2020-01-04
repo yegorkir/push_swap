@@ -4,18 +4,19 @@ project(push_swap C)
 set(CMAKE_C_STANDARD 11)
 
 include_directories(checker)
+include_directories(ft_printf/includes)
+include_directories(ft_printf/libft)
 include_directories(libft)
 include_directories(push_swap)
 
 add_executable(push_swap
         checker/check_result.c
-        checker/checker.h
+        includes/checker.h
         checker/do_rules_checker.c
-        checker/ft_ll_atoi.c
-        checker/ft_stack.c
-        checker/ft_stack.h
-        checker/go_exit.c
-        checker/main_checker.c
+        stack/ft_ll_atoi.c
+        stack/ft_stack.c
+        includes/ft_stack.h
+        stack/go_exit.c
         checker/perform_rules.c
         checker/read_n_execute.c
         libft/ft_atoi.c
@@ -88,14 +89,15 @@ add_executable(push_swap
         libft/libft.h
         push_swap/do_rules_ps.c
         push_swap/find_min_max_thirds.c
-        push_swap/sort_in_three_groups.c
         push_swap/indexing_list.c
-        push_swap/main_push_swap.c
-        push_swap/push_swap.h
+        includes/push_swap.h
+        push_swap/sort_in_three_groups.c
         push_swap/sort_triples.c
+        push_swap/sort_triples_choose_rules.c
         push_swap/sorter.c
         push_swap/triple_a_bottom_algorithms.c
         push_swap/triple_a_top_algorithms.c
-        push_swap/triple_basic_algorithms.c
         push_swap/triple_b_bottom_algorithms.c
-        push_swap/triple_b_top_algorithms.c push_swap/sort_triples_choose_rules.c)
+        push_swap/triple_b_top_algorithms.c
+        push_swap/triple_basic_algorithms.c
+        checker/main_checker.c stack/ascending_descending.c)
