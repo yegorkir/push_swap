@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_push_swap.c                                   :+:      :+:    :+:   */
+/*   ft_is_complex_string.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdeanne <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/01/04 18:37:17 by mdeanne           #+#    #+#             */
-/*   Updated: 2020/01/04 18:37:20 by mdeanne          ###   ########.fr       */
+/*   Created: 2020/01/04 23:33:04 by mdeanne           #+#    #+#             */
+/*   Updated: 2020/01/04 23:33:06 by mdeanne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
-
-int		main(int ac, char **av)
+int	ft_is_complex_string(char *str, char delim)
 {
-	t_stk	*a;
-	t_stk	*b;
+	int i;
 
-	if (ac < 2)
-		go_exit(1);
-	b = NULL;
-	a = NULL;
-	while (ac > 1)
+	i = 0;
+	while (*str)
 	{
-		push_front(&a, create(av[--ac]));
-		check_doubles(&a);
+		if (*str == delim)
+		{
+			i++;
+			while (*str && *str == delim)
+				str++;
+		}
+		if (*str)
+			str++;
 	}
-	indexing_list(a);
-	sorter(&a, &b);
-	clear_list(&a);
-	return (0);
+	return (i);
 }

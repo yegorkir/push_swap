@@ -70,20 +70,35 @@ _Bool	push_front(t_stk **head, t_stk *new)
 	return (1);
 }
 
-void	check_doubles(t_stk **stack)
+void	fill_stack_by_complex_arg(t_stk **stack, char *arg)
 {
-	t_stk *tmp;
+	char *tmp;
 
-	if (!stack || !*stack || !(*stack)->next)
-		return ;
-	tmp = (*stack)->next;
-	while (tmp)
+	while (*arg && (tmp = ft_strrchr(arg, ' ')))
 	{
-		if ((*stack)->number == tmp->number)
+		if (*(tmp + 1))
+		{
+			if (!push_front(stack, create(tmp + 1)))
+			{
+				clear_list(stack);
+				go_exit(1);
+			}
+			check_doubles(stack);
+		}
+		*tmp = '\0';
+	}
+}
+
+void	fill_stack(t_stk **stack, int ac, char **av)
+{
+	while (ac > 1)
+	{
+		if (ft_is_complex_string(av[--ac], ' '))
+			fill_stack_by_complex_arg(stack, av[ac]);
+		else if (!push_front(stack, create(av[ac])) && check_doubles(stack))
 		{
 			clear_list(stack);
 			go_exit(1);
 		}
-		tmp = tmp->next;
 	}
 }

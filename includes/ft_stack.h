@@ -25,11 +25,12 @@ typedef struct	s_stk
 	struct s_stk	*prev;
 }				t_stk;
 
+void fill_stack(t_stk **stack, int ac, char **av);
 t_stk			*create(char *number);
 _Bool			push_front(t_stk **head, t_stk *new);
 int				clear_list(t_stk **head);
-void			check_doubles(t_stk **stack);
 
+int check_doubles(t_stk **stack);
 _Bool			check_descending(t_stk *stack, int n);
 _Bool			check_ascending(t_stk *stack, int n);
 

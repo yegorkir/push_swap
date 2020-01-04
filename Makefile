@@ -18,11 +18,11 @@ FLAGS = -Wall -Wextra -Werror
 
 SRC_GEN = ./stack/
 SRC_CHECKER = ./checker_dir/
-SRC_PUSH_SWAP = ./push_swap/
+SRC_PUSH_SWAP = ./push_swap_dir/
 HEAD_PATH = ./includes/
 LIB_PATH = ./libft/
 
-SRC_FILES_GEN = ascending_descending.c ft_ll_atoi.c ft_stack.c go_exit.c
+SRC_FILES_GEN = checking.c ft_ll_atoi.c ft_stack.c go_exit.c
 SRC_FILES_CHECKER = check_result.c do_rules_checker.c main_checker.c \
 					perform_rules.c read_n_execute.c
 SRC_FILES_PUSH_SWAP = do_rules_ps.c find_min_max_thirds.c indexing_list.c \
@@ -44,22 +44,22 @@ OBJS_PUSH_SWAP = $(SRC_FILES_PUSH_SWAP:.c=.o)
 all: $(NAME_CHECKER_FILE) $(NAME_PUSH_SWAP_FILE)
 
 $(NAME_CHECKER_FILE): $(LIB_NAME) $(OBJS_GEN) $(OBJS_CHECKER)
-	gcc -o $(NAME_CHECKER_FILE) $(OBJS_GEN) $(OBJS_CHECKER) -L$(LIB_PATH) -lft
+	@gcc -o $(NAME_CHECKER_FILE) $(OBJS_GEN) $(OBJS_CHECKER) -L$(LIB_PATH) -lft
 
 $(NAME_PUSH_SWAP_FILE): $(LIB_NAME) $(OBJS_GEN) $(OBJS_PUSH_SWAP)
-	gcc -o $(NAME_PUSH_SWAP_FILE) $(OBJS_GEN) $(OBJS_PUSH_SWAP) -L$(LIB_PATH) -lft
+	@gcc -o $(NAME_PUSH_SWAP_FILE) $(OBJS_GEN) $(OBJS_PUSH_SWAP) -L$(LIB_PATH) -lft
 
 $(OBJS_GEN):
-	gcc -c $(SRCS_GEN) $(FLAGS) -I$(HEAD_PATH) -I$(LIB_PATH)
+	@gcc -c $(SRCS_GEN) $(FLAGS) -I$(HEAD_PATH) -I$(LIB_PATH)
 
 $(OBJS_CHECKER):
-	gcc -c $(SRCS_CHECKER) $(FLAGS) -I$(HEAD_PATH) -I$(LIB_PATH)
+	@gcc -c $(SRCS_CHECKER) $(FLAGS) -I$(HEAD_PATH) -I$(LIB_PATH)
 
 $(OBJS_PUSH_SWAP):
-	gcc -c $(SRCS_PUSH_SWAP) $(FLAGS) -I$(HEAD_PATH) -I$(LIB_PATH)
+	@gcc -c $(SRCS_PUSH_SWAP) $(FLAGS) -I$(HEAD_PATH) -I$(LIB_PATH)
 
 $(LIB_NAME):
-	make -C $(LIB_PATH) re
+	@make -C $(LIB_PATH) re
 
 clean:
 	@rm -f $(OBJS_GEN)

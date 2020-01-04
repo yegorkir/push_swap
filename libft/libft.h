@@ -99,4 +99,6 @@ int				ft_sqrt(int num, _Bool precision);
 int				ft_isdigit(int c);
 int				ft_isspace(int c);
 
+int	ft_is_complex_string(char *str, char delim);
+
 #endif

@@ -1,24 +1,24 @@
 cmake_minimum_required(VERSION 3.15)
-project(push_swap C)
+project(push_swap_dir C)
 
 set(CMAKE_C_STANDARD 11)
 
-include_directories(checker)
+include_directories(checker_dir)
 include_directories(ft_printf/includes)
 include_directories(ft_printf/libft)
 include_directories(libft)
-include_directories(push_swap)
+include_directories(push_swap_dir)
 
-add_executable(push_swap
-        checker/check_result.c
+add_executable(push_swap_dir
+        checker_dir/check_result.c
         includes/checker.h
-        checker/do_rules_checker.c
+        checker_dir/do_rules_checker.c
         stack/ft_ll_atoi.c
         stack/ft_stack.c
         includes/ft_stack.h
         stack/go_exit.c
-        checker/perform_rules.c
-        checker/read_n_execute.c
+        checker_dir/perform_rules.c
+        checker_dir/read_n_execute.c
         libft/ft_atoi.c
         libft/ft_bzero.c
         libft/ft_fib.c
@@ -87,17 +87,18 @@ add_executable(push_swap
         libft/get_next_line.c
         libft/get_next_line.h
         libft/libft.h
-        push_swap/do_rules_ps.c
-        push_swap/find_min_max_thirds.c
-        push_swap/indexing_list.c
+        push_swap_dir/do_rules_ps.c
+        push_swap_dir/find_min_max_thirds.c
+        push_swap_dir/indexing_list.c
         includes/push_swap.h
-        push_swap/sort_in_three_groups.c
-        push_swap/sort_triples.c
-        push_swap/sort_triples_choose_rules.c
-        push_swap/sorter.c
-        push_swap/triple_a_bottom_algorithms.c
-        push_swap/triple_a_top_algorithms.c
-        push_swap/triple_b_bottom_algorithms.c
-        push_swap/triple_b_top_algorithms.c
-        push_swap/triple_basic_algorithms.c
-        checker/main_checker.c stack/ascending_descending.c)
+        push_swap_dir/sort_in_three_groups.c
+        push_swap_dir/sort_triples.c
+        push_swap_dir/sort_triples_choose_rules.c
+        push_swap_dir/sorter.c
+        push_swap_dir/triple_a_bottom_algorithms.c
+        push_swap_dir/triple_a_top_algorithms.c
+        push_swap_dir/triple_b_bottom_algorithms.c
+        push_swap_dir/triple_b_top_algorithms.c
+        push_swap_dir/triple_basic_algorithms.c
+        push_swap_dir/main_push_swap.c
+        stack/checking.c libft/ft_is_complex_string.c)
