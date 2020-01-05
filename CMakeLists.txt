@@ -13,7 +13,7 @@ add_executable(push_swap_dir
         checker_dir/check_result.c
         includes/checker.h
         checker_dir/do_rules_checker.c
-        stack/ft_ll_atoi.c
+        stack/push_swap_ll_atoi.c
         stack/ft_stack.c
         includes/ft_stack.h
         stack/go_exit.c
@@ -84,9 +84,17 @@ add_executable(push_swap_dir
         libft/ft_strtrim.c
         libft/ft_tolower.c
         libft/ft_toupper.c
+        libft/ft_lstcirc_add.c
+        libft/ft_lstcirc_delelem.c
+        libft/ft_lstcirc_findcontent_size.c
+        libft/ft_strjoinre.c
+        libft/ft_strndup.c
+        libft/ft_lstcirc_strnew.c
+        libft/ft_strlcpy.c
+        libft/ft_sstrchr.c
+        libft/libft.h
         libft/get_next_line.c
         libft/get_next_line.h
-        libft/libft.h
         push_swap_dir/do_rules_ps.c
         push_swap_dir/find_min_max_thirds.c
         push_swap_dir/indexing_list.c
@@ -100,5 +108,5 @@ add_executable(push_swap_dir
         push_swap_dir/triple_b_bottom_algorithms.c
         push_swap_dir/triple_b_top_algorithms.c
         push_swap_dir/triple_basic_algorithms.c
-        push_swap_dir/main_push_swap.c
+        checker_dir/main_checker.c
         stack/checking.c libft/ft_is_complex_string.c)

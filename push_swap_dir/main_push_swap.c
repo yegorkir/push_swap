@@ -24,8 +24,11 @@ int		main(int ac, char **av)
 	fill_stack(&a, ac, av);
 	if (!a)
 		return (0);
-	indexing_list(a);
-	sorter(&a, &b);
+	if (!check_ascending(a, 0))
+	{
+		indexing_list(a);
+		sorter(&a, &b);
+	}
 	clear_list(&a);
 	return (0);
 }

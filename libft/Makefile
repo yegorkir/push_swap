@@ -26,7 +26,9 @@ SRCS = ft_strlen.c ft_strcmp.c ft_strncmp.c ft_strcpy.c ft_strncpy.c \
 	ft_putstr.c ft_putendl.c ft_putnbr.c ft_putchar_fd.c ft_putstr_fd.c \
 	ft_putendl_fd.c ft_putnbr_fd.c ft_lstnew.c ft_lstdelone.c ft_lstdel.c \
 	ft_lstadd.c ft_lstiter.c ft_lstpush.c ft_pow.c ft_fib.c ft_sqrt.c \
-	ft_isdigit.c ft_isspace.c get_next_line.c ft_is_complex_string.c
+	ft_isdigit.c ft_isspace.c get_next_line.c ft_is_complex_string.c \
+	ft_lstcirc_add.c ft_lstcirc_delelem.c ft_lstcirc_findcontent_size.c \
+	ft_strjoinre.c ft_strndup.c ft_lstcirc_strnew.c ft_strlcpy.c ft_sstrchr.c
 
 OBJECTS = $(SRCS:.c=.o)
 

@@ -98,15 +98,34 @@ void	sorting_group_b(t_stk **a, t_stk **b, t_stk *sort_elem, t_groups *grp)
 	}
 }
 
+void	sort_in_two_groups(t_stk **a, t_stk **b, t_stk *sort_elem,t_groups *grp)
+{
+	if (sort_elem->stack_name == 'a')
+	{
+		grp->two_thirds = (grp->third + grp->two_thirds) / 2;
+		grp->third = -1;
+		sorting_group_a(a, b, sort_elem, grp);
+	}
+	else
+	{
+		grp->third = (grp->third + grp->two_thirds) / 2;
+		grp->two_thirds = -1;
+		sorting_group_b(a, b, sort_elem, grp);
+	}
+}
+
 void	sort_in_three_groups(t_stk **a, t_stk **b)
 {
 	t_groups	grp;
 	t_stk		*sort_group;
+	int			len;
 
 	sort_group = find_max_depth_not_sorted_elem(*a, *b);
 	find_thirds(sort_group, &grp.third, &grp.two_thirds);
 	grp.depth = sort_group->depth;
-	if (sort_group->stack_name == 'a')
+	if ((len = lst_group_len(*a)) > 3 && len <= 6)
+		sort_in_two_groups(a, b, sort_group, &grp);
+	else if (sort_group->stack_name == 'a')
 		sorting_group_a(a, b, sort_group, &grp);
 	else
 		sorting_group_b(a, b, sort_group, &grp);

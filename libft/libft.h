@@ -99,6 +99,17 @@ int				ft_sqrt(int num, _Bool precision);
 int				ft_isdigit(int c);
 int				ft_isspace(int c);
 
-int	ft_is_complex_string(char *str, char delim);
+char			*ft_strjoinre(char **s1, char const *s2);
+char			*ft_strndup(const char *s1, size_t n);
+size_t			ft_strlcpy(char *dst, const char *src, size_t size);
+char			*ft_sstrchr(const char *s, int c);
+
+t_list			*ft_lstcirc_strnew(char const *content, size_t content_size);
+t_list			*ft_lstcirc_add(t_list **cur, char const *content, size_t content_size);
+int				ft_lstcirc_delelem(t_list **cur, t_list *del_elem);
+int				ft_lstcirc_findcontent_size(t_list **lst, size_t content_size);
+
+
+int				ft_is_complex_string(char *str, char delim);
 
 #endif

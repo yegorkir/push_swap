@@ -39,12 +39,14 @@ t_stk	*create(char *number)
 	i = 0;
 	if (number[i] == '-')
 		i++;
+	if (!ft_strlen(&number[i]))
+		return (NULL);
 	while (number[i])
 		if (!ft_isdigit((int)number[i++]))
 			return (NULL);
-	if (!(new = (t_stk*)malloc(sizeof(t_stk))))
+	if (((num = push_swap_ll_atoi(number)) > 2147483647) || (num < -2147483648))
 		return (NULL);
-	if (((num = ft_ll_atoi(number)) > 2147483647) || (num < -2147483648))
+	if (!(new = (t_stk*)malloc(sizeof(t_stk))))
 		return (NULL);
 	new->number = num;
 	new->depth = 0;
@@ -57,10 +59,11 @@ t_stk	*create(char *number)
 
 _Bool	push_front(t_stk **head, t_stk *new)
 {
-	if (!head)
-		return (0);
 	if (!new)
+	{
 		clear_list(head);
+		go_exit(2);
+	}
 	if (*head)
 	{
 		new->next = *head;
@@ -78,15 +81,13 @@ void	fill_stack_by_complex_arg(t_stk **stack, char *arg)
 	{
 		if (*(tmp + 1))
 		{
-			if (!push_front(stack, create(tmp + 1)))
-			{
-				clear_list(stack);
-				go_exit(1);
-			}
+			push_front(stack, create(tmp + 1));
 			check_doubles(stack);
 		}
 		*tmp = '\0';
 	}
+	push_front(stack, create(arg));
+	check_doubles(stack);
 }
 
 void	fill_stack(t_stk **stack, int ac, char **av)
@@ -95,10 +96,10 @@ void	fill_stack(t_stk **stack, int ac, char **av)
 	{
 		if (ft_is_complex_string(av[--ac], ' '))
 			fill_stack_by_complex_arg(stack, av[ac]);
-		else if (!push_front(stack, create(av[ac])) && check_doubles(stack))
+		else
 		{
-			clear_list(stack);
-			go_exit(1);
+			push_front(stack, create(av[ac]));
+			check_doubles(stack);
 		}
 	}
 }

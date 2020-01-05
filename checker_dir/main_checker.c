@@ -19,15 +19,19 @@ int		main(int ac, char **av)
 	char	*line;
 
 	if (ac < 2)
-		go_exit(1);
+		go_exit(0);
 	a = NULL;
 	b = NULL;
 	line = NULL;
 	fill_stack(&a, ac , av);
 	if (!a)
-		go_exit(1);
+		go_exit(2);
 	read_n_execute(line, &a, &b);
-	ft_putendl("OK");
+	if (!b && check_ascending(a , 0))
+		ft_putendl("OK");
+	else
+		ft_putendl("KO");
 	clear_list(&a);
+	clear_list(&b);
 	return (0);
 }

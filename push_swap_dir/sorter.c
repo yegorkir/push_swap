@@ -19,6 +19,7 @@ _Bool	is_group_triple(t_stk *a, t_stk *b)
 	return (0);
 }
 
+
 void	sorter(t_stk **a, t_stk **b)
 {
 	int flag;
@@ -26,11 +27,11 @@ void	sorter(t_stk **a, t_stk **b)
 	flag = 0;
 	while (b || flag == 0)
 	{
-		flag++;
 		while (!is_group_triple(*a, *b))
 			sort_in_three_groups(a, b);
-		if (!*b || !*a)
+		if ((flag != 0 && !*b) || !*a)
 			return ;
 		sort_triples(a, b);
+		flag = 1;
 	}
 }

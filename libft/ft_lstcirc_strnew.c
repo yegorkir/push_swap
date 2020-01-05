@@ -1,35 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_lstcirc_strnew.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdeanne <mdeanne@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/08 19:32:07 by mdeanne           #+#    #+#             */
-/*   Updated: 2020/01/04 18:35:43 by mdeanne          ###   ########.fr       */
+/*   Created: 2019/06/27 17:22:55 by mdeanne           #+#    #+#             */
+/*   Updated: 2019/06/27 17:22:55 by mdeanne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-long long		ft_ll_atoi(const char *str)
+t_list	*ft_lstcirc_strnew(char const *content, size_t content_size)
 {
-	int			negative;
-	long long	res;
+	t_list *new;
 
-	res = 0;
-	negative = 1;
-	while (ft_isspace((int)*str))
-		str++;
-	if (*str == '-' || *str == '+')
+	new = (t_list*)malloc(sizeof(t_list));
+	if (new == NULL)
+		return (NULL);
+	if (content)
 	{
-		if (*str == '-')
-			negative = -1;
-		str++;
+		new->content = (void *)ft_strdup(content);
+		if (!(new->content))
+		{
+			free(new);
+			return (NULL);
+		}
 	}
-	while (ft_isdigit((int)*str))
-	{
-		res = res * 10 + (int)(*str++ - '0');
-	}
-	return (negative * (int)res);
+	else
+		new->content = NULL;
+	new->content_size = content_size;
+	new->next = new;
+	return (new);
 }

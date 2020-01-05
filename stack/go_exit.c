@@ -15,7 +15,9 @@
 
 void	go_exit(int ko)
 {
-	if (ko)
+	if (ko == 1)
 		ft_putendl("KO");
+	else if (ko == 2)
+		ft_putendl("Error");
 	exit(1);
 }

@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_lstcirc_add.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdeanne <mdeanne@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/20 17:59:07 by mdeanne           #+#    #+#             */
-/*   Updated: 2019/06/27 16:33:11 by mdeanne          ###   ########.fr       */
+/*   Created: 2019/06/27 17:25:51 by mdeanne           #+#    #+#             */
+/*   Updated: 2019/06/27 17:28:37 by mdeanne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
-# define BUFF_SIZE 10
-# include "libft.h"
+#include "libft.h"
 
-int				get_next_line(const int fd, char **line);
+t_list	*ft_lstcirc_add(t_list **cur, char const *content, size_t content_size)
+{
+	t_list *new;
 
-#endif
+	if (!cur || !(new = ft_lstcirc_strnew(content, content_size)))
+		return (NULL);
+	if (!*cur)
+		*cur = new;
+	else
+	{
+		new->next = (*cur)->next;
+		(*cur)->next = new;
+	}
+	return (new);
+}

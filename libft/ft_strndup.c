@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdeanne <mdeanne@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/20 17:59:07 by mdeanne           #+#    #+#             */
-/*   Updated: 2019/06/27 16:33:11 by mdeanne          ###   ########.fr       */
+/*   Created: 2019/04/13 12:39:55 by mdeanne           #+#    #+#             */
+/*   Updated: 2019/06/25 16:41:15 by mdeanne          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
-# define BUFF_SIZE 10
-# include "libft.h"
+#include "libft.h"
 
-int				get_next_line(const int fd, char **line);
+char	*ft_strndup(const char *s1, size_t n)
+{
+	char	*str;
+	size_t	len;
 
-#endif
+	len = ft_strlen(s1);
+	if (len < n)
+		str = (char*)malloc(sizeof(str) * (len + 1));
+	else
+		str = (char*)malloc(sizeof(str) * (n + 1));
+	if (str == NULL)
+		return (NULL);
+	ft_strlcpy(str, s1, n + 1);
+	return (str);
+}

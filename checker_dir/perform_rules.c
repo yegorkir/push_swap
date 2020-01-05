@@ -80,6 +80,6 @@ void	perform_rule(char *rule, t_stk **a, t_stk **b)
 	{
 		clear_list(a);
 		clear_list(b);
-		go_exit(1);
+		go_exit(2);
 	}
 }

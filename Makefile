@@ -22,7 +22,7 @@ SRC_PUSH_SWAP = ./push_swap_dir/
 HEAD_PATH = ./includes/
 LIB_PATH = ./libft/
 
-SRC_FILES_GEN = checking.c ft_ll_atoi.c ft_stack.c go_exit.c
+SRC_FILES_GEN = checking.c push_swap_ll_atoi.c ft_stack.c go_exit.c
 SRC_FILES_CHECKER = check_result.c do_rules_checker.c main_checker.c \
 					perform_rules.c read_n_execute.c
 SRC_FILES_PUSH_SWAP = do_rules_ps.c find_min_max_thirds.c indexing_list.c \

@@ -54,23 +54,21 @@ _Bool	check_descending(t_stk *stack, int n)
 	return (1);
 }
 
-int		check_doubles(t_stk **stack)
+void check_doubles(t_stk **stack)
 {
 	t_stk *tmp;
 
-	if (!stack)
-		return (0);
-	else if (!*stack || !(*stack)->next)
-		return (1);
+	if (!*stack || !(*stack)->next)
+		return ;
 	tmp = (*stack)->next;
 	while (tmp)
 	{
 		if ((*stack)->number == tmp->number)
 		{
 			clear_list(stack);
-			go_exit(1);
+			go_exit(2);
 		}
 		tmp = tmp->next;
 	}
-	return (1);
+	return ;
 }
